@@ -1,330 +1,362 @@
-:root{
-    --primary-color: #19c6d2;
-    --secondary-color: #AED581;
-    --headings-color: #212121;
-    --text-color: #333;
-    --background-color: #FAFAFA;
-    --button-color: #D32F2F;
-    --button-hover: #9E9E9E;
-    --box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    --border-radius: 0.4rem;
+:root {
+  --primary-color: #00BAFE;
+  --secondary-color: #ffffff;
+  --black: #000000f3;
+  --red: #D72638;
+  --background-color: #FAFAFA;
+  --box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border-radius: 0rem;
+  --font-lg: 2.5rem;
+  --font-md: 1.5rem;
+  --font-sm: 1rem;
 }
-
-/*unvisited effects*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  html {
-    font-size: 66%;
-  }
-  
-  body {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    line-height: 1.6;
-    overflow-y:hidden;
-  }
-
-  section{
-    padding: min(2rem, 8%);
-    margin: 2rem 0;
-    border-radius: 0.5rem;
-    background-color: var(--background-color);
-    box-shadow: var(--box-shadow);
-  }
-
-
-  
-.hamburger{
-    display: none;
-   
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-  .header{
-    position: fixed;
-    top: 0;
-    padding: 2rem;
-    margin:  0;
-    width:100%;
-    background-color: var(--background-color);
-    z-index: 1000;
-    box-shadow:  0px 8px 12px rgba(0,0,0,0.2);
-    border-radius:var(--border-radius);
-  }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  background-color: var(--background-color);
+  color: var(--black);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
 
-  .header .container{
-    display: flex;
-    flex-direction: row;
-    gap:70rem;
-   
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: var(--box-shadow);
+  z-index: 1000;
+}
+
+.logo img {
+  width: 8rem;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: var(--font-sm);
+  padding: .5rem 1rem;
+}
+
+.nav-links a:hover{
+  background:var(--red);
+  color:var(--background-color);
+}
+
+.product, .about{
+  position:relative;
+}
+
+.nav-links  .dropdown-content{
+  position:absolute;
+  list-style-type: none;
+  padding:0.5rem 1rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  top:2.4rem;
+  background:var(--background-color);
+  box-shadow:var(--box-shadow);
+  animation:dropdown 0.3s ease-in-out;
+  display:none;
+  z-index:1;
+}
+
+.product .dropdown-content{
+  left:-3rem;
+
+}
+
+@keyframes dropdown {
+  0%{
+    transform:translateY(-20px);
+    opacity:0;
+  }
+   100%{
+    transform:translateY(0);
+    opacity:1;
   }
   
-  .header .container .logo img{
-    width: 8rem;
-    aspect-ratio: 2/1.3;
-    cursor: pointer;
+}
 
+.nav-links  .dropdown-content li{
+  color: var(--black);
+  padding:.3rem 1.5rem;
+  text-wrap:nowrap;
+  border-bottom:1px solid #05050573;
+}
 
-  }
-
-  .header .container nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap:5rem;
-    margin-top:2rem;
-    list-style: none;
-    cursor: pointer;
-  }
-
+.nav-links  .dropdown-content li:hover{
+  color:var(--primary-color);
+  background:var(--red);
   
+}
+ .product:hover .dropdown-content, .about:hover .dropdown-content{
+  display:flex;
+}
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--black);
+}
 
-  .header .container nav ul .dropdown {
-    position: relative;
-    display: inline-block;
-   
-  }
+/* HERO SECTION */
+.hero {
+  background: url('images/background2.avif') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding-top: 8rem;
+  text-align: center;
+}
 
-.header .container nav ul a {
-    color:var(--headings-color);
-    text-decoration: none;
-    padding: 1rem;
-    font-size:1.5rem;
-    text-wrap: nowrap;
-    cursor: pointer;
-    border-radius:var(--border-radius);
-  }
 
-  .header .container nav ul a .fas{
-    -webkit-text-fill-color:transparent;
-    -webkit-text-stroke:1px var(--headings-color);
-    
-  }
+.hero-content {
+  background-color: rgba(247, 247, 247, 0);
+  padding: 2rem;
+  max-width: 40rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
 
-  .header .container nav ul .dropdown-content {
-    position: absolute;
-    background-color: var(--background-color);
-    min-width: 10rem;
-    border-radius:var(--border-radius);
-    box-shadow:var(--box-shadow);
-    cursor: pointer;
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 999;
-   
-  }
+.hero-content h1 {
+  font-size: var(--font-lg);
+  color: var(--red);
+  margin-bottom: 1.5rem;
+}
 
-  .header .container nav ul .dropdown-content a {
-    color: var(--text-color);
-    padding: .8rem 1rem;
-    text-decoration: none;
+.hero-content p {
+  font-size: var(--font-md);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: transparent;
+  color: var(--red);
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight:bold;
+  border:1px solid var(--red);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  font-size: var(--font-sm);
+  transition: 0.3s ease;
+    animation:dropdown 0.4s ease-in-out;
+}
+
+.btn:hover {
+  background-color: pink;
+  color: red;
+  border:none;
+};
+
+/* ABOUT */
+ .about-container {
+      position: relative;
+      overflow-x: hidden;
+       width: 100vw;
+       max-width: 100%;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 1s ease-in-out;
+      height: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 4rem;
+      background-color: var(--secondary-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .slide-content {
+      flex: 1;
+    }
+
+    .slide-content h2 {
+      font-size: var(--font-lg);
+      color: var(--primary-color);
+    }
+
+    .slide-content p {
+      font-size: var(--font-md);
+      color: var(--black);
+    }
+
+    .slide-image {
+      flex: 1;
+    }
+
+    .slide-image img {
+      max-width: 100%;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+    }
+
+    .dots {
+      position: relative;
+      bottom: 1.5rem;
+      left: 100%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+    }
+
+    .dot {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      opacity: 0.5;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .dot.active {
+      opacity: 1;
+      background-color: var(--red);
+    }
+
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 2rem;
+  padding: 6rem 2rem 4rem;
+  background-color: var(--secondary-color);
+}
+
+.feature {
+  background: #fff;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.feature h2 {
+  color: var(--headings-color);
+  margin-bottom: 1rem;
+  font-size: var(--font-md);
+}
+
+.feature p {
+  font-size: var(--font-sm);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width:768px) {
+  .menu-toggle {
     display: block;
   }
 
-  .header .container nav ul .dropdown-content a:hover, li a:hover {
-    background-color: var(--button-hover);
-
-  }
-
-  .header .container nav ul .dropdown:hover .dropdown-content {
-   
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  .header .container nav ul .dropdown:hover > a {
-    background-color:  var(--button-hover);
-  }
-
-
-  /* HERO SECTION */
-
-  .hero{
-    height:100vh;
-    margin-top:9rem;
-  }
-
-  .hero .container {
-    background-image: url('images/close-up-african-american-hand-holding-stethoscope_482257-19507.webp');
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    color: white;
-    transition: background-image 1s ease-in-out;
-  }
-
-  .hero .container .left-text {
-    font-size: 2rem;
-    width: 30%;
-    color:var(--headings-color);
-  }
-
-  .hero .container .right-side {
-    width: 30%;
-    display: flex;
+  .nav-links {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 1rem;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: var(--box-shadow);
+    animation:dropdown 0.4s ease-in-out;
+    z-index: 999;
   }
 
-  .hero .container .right-side p {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
-    text-align: right;
-    color:var(--headings-color);
-  }
-
-  .hero .container  .right-side button {
-    width: 10.4rem;
-    padding: 0.8rem;
-    margin: 0.6rem 0;
-    font-size: 1rem;
-    border: none;
-    border-radius: var(--border-radius);
-    border:1px solid var(--primary-color);
-    background:transparent;
-    color: var(--primary-color);
-    cursor: pointer;
-  }
-
-  .hero .container .right-side button:hover {
-    background-color:var(--primary-color) ;
-    color: var(--background-color);
-  }
-
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-100px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(100px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .left-text {
-    animation: slideInLeft 1s ease forwards;
-  }
-  
-  .right-side {
-    animation: slideInRight 1s ease forwards;
-  }
-  
-
-  /* media query MOBILE PHONE */
-
-    @media (max-width: 768px) {
-  
-         
-   
-  html {
-    font-size: 1.8rem;
-   }
-
-   .header .container{
+  .nav-links.active {
     display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    gap:0;
-   }
+  }
 
-        .header .container nav .nav-links {
-        flex-direction: column;
-        position: absolute;
-        top: -30rem;
-        left: 0;
-        width: 100%;
-        background-image: url('images/logo.png');
-        background-color: var(--background-color);
-        background-repeat:no-repeat;
-        background-size:15rem;
-        background-position: right;
-        display:flex;
-        opacity: 0;
-        padding: 2rem 1rem;
-        border-radius:var(--border-radius);
-        box-shadow:0px 8px 10px rgba(0,0,0,0.2); 
-        transform: translateY(0);
-        transition: all 0.3s ease-in-out;
-        pointer-events: none;
-        
-        }
-    
-        .header .container nav ul.show {
-        display: flex;
-       
-        }
-    
-        .header .container nav ul li {
-        margin-bottom: 1rem;
-        }
-    
-        .header .container nav ul li:last-child {
-        margin-bottom: 0;
-        }
-    
-        .header .container nav ul li a {
-        padding: 1rem;
-        }
-    
-        .header .container nav ul li a:hover {
-        background-color: var(--button-hover);
-        }
-    
-        .header .container nav ul li a.active {
-        background-color: var(--button-hover);
-        }
-    
-        .header .container nav ul li a i {
-        margin-right: 0.5rem;
-        }
-    
-        /* Dropdown styles */
-    
-        .header .container nav ul li.dropdown-content {
-        position: static;
-    }
 
-    
-    .header .container nav .nav-links.active{
-    top:6rem;
-    opacity: 1;
-    pointer-events: all;
+.product .dropdown-content{
+  left:0;
+
 }
 
-.hamburger{
+  .hero{
+    justify-content:flex-start;
+   
+   
+  }
+
+   .hero-content{
+    max-width:20rem;
+    padding: 2rem;
+    box-shadow: none;
+     background-color: none;
+   }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    width:10rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+  }
+  
+nav{
     padding: 1rem;
     display: flex;
-   
+
 }
 
 .ham-menu{
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     margin-left: auto;
     position: relative;
 }
@@ -332,7 +364,8 @@
 .ham-menu span{
     height: 5px;
     width: 100%;
-    background-color: var(--headings-color);
+    background-color: var(--black);
+    border-radius: 1px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -365,18 +398,42 @@
 }
 
 
-  .hero .container {
-    background-image: url('images/close-up-african-american-hand-holding-stethoscope_482257-19507.webp');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    color: white;
-    transition: background-image 1s ease-in-out;
+  .slide {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
   }
 
+  .slide-content h2 {
+    font-size: 2rem;
+  }
+
+  .slide-content p {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .slide-image {
+    margin-top: 2rem;
+  }
+
+  .slide-image img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: var(--box-shadow);
+  }
+
+  .dots {
+    bottom: 1rem;
+  }
+
+  .dot {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
 }
+
+
+
+
 
