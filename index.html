@@ -27,11 +27,11 @@
       </nav>
    </div>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#" class="about">About <i class="fas fa-caret-down"></i>
+      <li><a href="#about" class="about">About <i class="fas fa-caret-down"></i>
      <ul class="dropdown-content">
-                    <li> values</li>
-                    <li>Our Mission</li>
-                    <li>Our Vision</li>
+                    <li class="active"  onclick="goToSlide(2)" onclick="document.getElementById('value').scrollIntoView()"> values</li>
+                    <li class="active" onclick="goToSlide(0)">Our Mission</li>
+                    <li class="active" onclick="goToSlide(1)" >Our Vision</li>
 
                 </ul></a></li>
       <li><a href="#">Service</a></li>
@@ -72,44 +72,66 @@
     <img src="images/medsphere12.jpg" alt="pic of doc" class="hero-img4">
 </section>
 
+<section class="about-section1" id="about" >
+  <div class="about-corner"></div>
+  <div class="about-content">
+    <h2>About Us</h2>
+    <p>
+     <span>MedSphere</span> Healthcare Limited is a leading provider of essential medical equipment
+    and consumables, dedicated to supporting healthcare professionals and facilities. <br>
+    We are committed to enhancing patient care through reliable, high-quality products and services. <br>
+    </p><br>
+    <p>We offer a comprehensive range of medical equipment, from diagnostic tools to surgical
+        instruments, alongside a wide selection of consumables. Our focus is on providing healthcare
+        products from trusted manufacturers, ensuring quality and performance. <br/>
+        At Medsphere Healthcare Limited, we are driven by a commitment to excellence and innovation.
+        We strive to be a trusted partner, providing healthcare solutions that contribute to improve
+        patient outcomes and the advancement of medical practices.
+    </p>
+  </div>
+</section>
+
+
   
-<div class="about-container">
+<div class="about-container" > 
   <div class="slider" id="slider">
     <!-- Mission -->
     <div class="slide">
-      <div class="slide-content">
+      <div class="slide-content" id="mission">
         <h2>Our Mission</h2>
          <p> <span>Medsphere</span> Healthcare Ltd is on a mission to enhance the quality of healthcare in Africa. <br>
             by providing unsurpassing medical devices and healthcare solutions. We strive to be the lifeline
             that connects medical innovation to patients care.<p>
      </div>
+
+
       <div class="slide-image">
-        <img src="https://source.unsplash.com/600x400/?medical,technology" alt="Mission Image" />
+        <img src="images/mission.avif" alt="Mission Image" />
       </div>
     </div>
 
     <!-- Vision -->
     <div class="slide">
-      <div class="slide-content">
+      <div class="slide-content" id="vision">
         <h2>Our Vision</h2>
-        <p>We envision a future where we are the leading choice in  healthcare   and our affiliated segments
+        <p>We envision a future where we are the leading choice in  healthcare and our affiliated segments
             by setting a new standard in quality customer satisfaction.
             </p>
       </div>
       <div class="slide-image">
-        <img src="https://source.unsplash.com/600x400/?healthcare,digital" alt="Vision Image" />
+        <img src="images/vision.avif" alt="Vision Image" />
       </div>
     </div>
 
     <!-- Values -->
-    <div class="slide">
+    <div class="slide" id="value">
       <div class="slide-content">
-        <h2>Our Core Values</h2>
+        <h2>Our Values</h2>
         <p>Innovation, Reliability, Integrity, Professionalism and Excellence — Serves as the cornerstone values 
             of this enterprise.</p>
       </div>
       <div class="slide-image">
-        <img src="https://source.unsplash.com/600x400/?doctors,teamwork" alt="Values Image" />
+        <img src="images/handshake2.avif" alt="Values Image" />
       </div>
     </div>
   </div>
