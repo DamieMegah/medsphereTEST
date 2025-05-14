@@ -303,6 +303,11 @@ header.navbar {
       color: var(--black);
     }
 
+    .slide-content span{
+      color:var(--red);
+      font-weight:bold;
+    }
+
     .slide-image {
       flex: 1;
     }
@@ -414,11 +419,12 @@ footer {
     flex-direction: column;
     text-align: left;
     padding: 10rem 1rem;
+    height:80vh;
   }
 
   .hero h1{
     font-size:1.7rem;
-    width:60%;
+    width:65%;
     z-index:3;
   }
 
