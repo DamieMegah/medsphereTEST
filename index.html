@@ -2,672 +2,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Converter</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="style.css">
-    <scrip src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+     <!---font awesome cdn link--->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/swiper-bundle.min.css"/>
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <link rel="icon" href="images/logo2.jpg" type="images/jpg">
+     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+     <link id="stylesheet" rel="stylesheet" href="style.css">
+     <title>Medsphere</title>
+  
 </head>
 <body>
-
-    <header>
-        <div class="logo">
-           <h2>99converter<span>.com</span></h2>
-
-          <h4>Convert anything anytime, anywhere...</h4>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="medsphere Logo" />
+    </div>
+    <div class="menu-toggle" id="menu-toggle"> 
+        <nav>
+         <div class="ham-menu">
+           <span ></span>
+           <span ></span>
+           <span ></span>
         </div>
+      </nav>
+   </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#help" class="about">Services <i class="fas fa-caret-down"></i>
+            <ul class="dropdown-content">
+                    <li > Servicing <br> <small>Equipments servicing details</small></li>
+                    <li >Consultation <br> <small>Expert equipments advice</small></li>
+                     <li> Installation <br> <small>Professional installation</small></li>
+                      <li >Maintenace <br> <small>Regular maintenance services</small></li>
+                   
 
-        <div class="nav">
-            <div class="anchor">
-              <a href="#">HOME <span>&#8594;</span></a>
-              <a href="#">FILE CONVERTER <span>&#8594;</span></a>
-              <a href="#">CURRENCY CONVERTER <span>&#8594;</span></a>
-              <a href="#">UNIT CONVERTER<span>&#8594;</span></a>
-              <a href="#">SUPPORT <span>&#8594;</span></a>
-          </div>
-        </div>
+                </ul>
+              </a>
+            </li>
 
-   
-        
+      <li><a href="#" class="product">Products  <i class="fas fa-caret-down"></i>
+                <ul class="dropdown-content">
+                    <li>CBS 50</li>
+                    <li>Seamaty ABG</li>
+                    <li>Seamaty Semi-Auto</li>
+                    <li>Seamaty Dey Chem</li>
+                    <li>Dr Accu</li>
+                    <li>Seamaty Hand Held Electrolytes</li>
+                    <li>Double G Lipid Profile</li>
+                    <li>Urinalysis Analyzer</li>
+                    <li>Seamaty Hematolgy</li>
+                    <li>List of Consumables</li>
+                     
+                </ul>
+            </a>
+            </li>
+                     <li><a href="#">Company</a></li>
 
-        <div class="hero reveal" id="hero">
-            <div class="hero-bg active" id="bg1"><img src="images/m-virtuals.png" alt="Background 1"></div>
-            <div class="hero-bg" id="bg2"><img src="images/polering (1).png" alt="Background 2"></div>
-            <div class="hero-bg" id="bg3"><img src="images/shopping.png" alt="Background 3"></div>
-            <div class="hero-bg" id="bg3"><img src="images/school (1).png" alt="Background 3"></div>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
 
-            <h2 id="hero-heading"></h2>
-            <p id="hero-text"></p>
-            <button class="cta-btn" id="cta-btn">Get Started</button>
-        </div>
 
-        
-    <div class="ham-nav">
-      <div class="ham-menu">
-         <span ></span>
-         <span ></span>
-         <span ></span>
+  <section class="hero">
+    <div class="hero-content">
+
+    <h1>Pioneering Advancement in Healthcare Technology</h1>
+
+    <div class="hero2">
+     <p>Discover our innovative medical and lab solutions tailored for excellence.</p>
+      <div class="button">
+       <a href="#" class="btn">Explore</a> 
+       <a href="#contact" class="btn2">Get&nbsp;in&nbsp;Touch</a>
       </div>
     </div>
 
-    </header>
-    
-       <section class="body">
+  </div>
 
-         <div class="file-container">
-            <form action="">
-              <label for="input-file">File  Converter</label>
-              <input type="file" id="input-file" name="input-file"><br>
-              <label for="input-format">Select File Format:</label>
-              <select name="input-format" id="input-format">
-                <option value="pdf">PDF</option>
-                <option value="docx">DOCX</option>
-                <option value="txt">TXT</option>
-                <option value="odt">ODT</option>
-              </select>
-              
-              <label for="output-format">Select New Format:</label>
-              <select name="output-format" id="output-format">
-                <option value="pdf">PDF</option>
-                <option value="docx">DOCX</option>
-                <option value="txt">TXT</option>
-                <option value="odt">ODT</option>
-              </select>
+  <div class="hero-cone"></div>
 
-              <button type="submit">Convert</button>
+  
+    <div class="hero-show">
+      <img src="images/hero-pic1.jpg" alt="hero-pic1" class="active">
+      <img src="images/SMT-30.jpg" alt="hero-pic2">
+      <img src="images/hero-pic5.avif" alt="hero-pic3">
+      <img src="images/SMT-120 II.png" alt="hero-pic4">
+    </div>
+  
+</section>
 
-            </form>
-
-         </div>
-
-
-
-           <container id="currency">
-
-            <details>
-                <summary>Currency Converter</summary>
-
-                  <details>
-                    <summary>Fiat Currency</summary>
-
-                    <select name="fiat" id="fiat">
-                        <option value="usd">USD</option>
-                        <option value="pounds">POUNDS</option>
-                        <option value="euro">EURO</option>
-                        <option value="franc">FRANC</option>
-                        <option value="yen">YEN</option>
-                        <option value="won">WON</option>
-                        <option value="naira">NAIRA</option>
-                    </select>
-                     <input type="number" id="usd">  =
-                      
-                     <select name="fiat" id="fiat">
-                        <option value="usd">USD</option>
-                        <option value="pounds">POUNDS</option>
-                        <option value="euro">EURO</option>
-                        <option value="franc">FRANC</option>
-                        <option value="yen">YEN</option>
-                        <option value="won">WON</option>
-                        <option value="naira">NAIRA</option>
-                    </select>
-
-                     <input type="number" id="output">
-
-                    <button onclick="copyValue()">CONVERT</button>
-                     
-                  </details>
-
-                  <details>
-                    <summary>Crypto currency</summary>
-
-                    <select name="Crypto" id="Crypto">
-                        <option value="btc">BITCOIN(BTC)</option>
-                        <option value="eth">ETHEREUM(ETH)</option>
-                        <option value="usdt">TETHER(USDT)</option>
-                        <option value="xrp">XRP(XRP)</option>
-                        <option value="bnb">BNB(BNB)</option>
-                        <option value="sol">SOLANA(SOL)</option>
-                        <option value="doge">DOGECOIN(DOGE)</option>
-                        <option value="usdc">USDC(USDC)</option>
-                        <option value="trx">TRON(TRX)</option>
-                    </select>
-                     <input type="number" id="CryptoInput">  =
-                      
-                     <select name="fiat" id="fiatCrypto">
-                        <option value="usd">USD</option>
-                        <option value="btc">BITCOIN(BTC)</option>
-                        <option value="eth">ETHEREUM(ETH)</option>
-                        <option value="usdt">TETHER(USDT)</option>
-                        <option value="franc">XRP(XRP)</option>
-                        <option value="bnb">BNB(BNB)</option>
-                        <option value="sol">SOLANA(SOL)</option>
-                        <option value="doge">DOGECOIN(DOGE)</option>
-                        <option value="naira">USDC(USDC)</option>
-                        <option value="trx">TRON(TRX)</option>
-                        <option value="pounds">POUNDS</option>
-                        <option value="euro">EURO</option>
-                        <option value="franc">FRANC</option>
-                        <option value="yen">YEN</option>
-                        <option value="won">WON</option>
-                        <option value="naira">NAIRA</option>
-                    </select>
-
-                     <input type="number" id="output">
-
-                    <button onclick="copyValueCrypto()">CONVERT</button>
-                     
-                  </details>
-
-                  <details>
-                    <summary>Precious Metals</summary>
-
-                    <select name="metals" id="metals">
-                        <option value="gold">GOLD(XAU)</option>
-                        <option value="silver">SILVER(XAG)</option>
-                        
-                    </select>
-                     <input type="number" id="usd">  =
-                      
-                     <select name="fiatGold" id="fiatGold">
-                        <option value="usd">USD</option>
-                        <option value="pounds">POUNDS</option>
-                        <option value="euro">EURO</option>
-                        <option value="franc">FRANC</option>
-                        <option value="yen">YEN</option>
-                        <option value="won">WON</option>
-                        <option value="naira">NAIRA</option>
-                    </select>
-
-                     <input type="number" id="output">
-
-                    <button onclick="copyValueMetals()">CONVERT</button>
-                     
-                  </details>
+<section class="about-section1" id="about" >
+  <div class="about-corner"></div>
+  <div class="about-content">
+    <h2>About Us</h2>
+    <p>
+     <span>MedSphere</span> Healthcare Limited is a leading provider of essential medical equipment
+    and consumables, dedicated to supporting healthcare professionals and facilities. <br>
+    We are committed to enhancing patient care through reliable, high-quality products and services. <br>
+    </p><br>
+    <p>We offer a comprehensive range of medical equipment, from diagnostic tools to surgical
+        instruments, alongside a wide selection of consumables. Our focus is on providing healthcare
+        products from trusted manufacturers, ensuring quality and performance. <br/>
+        At Medsphere Healthcare Limited, we are driven by a commitment to excellence and innovation.
+        We strive to be a trusted partner, providing healthcare solutions that contribute to improve
+        patient outcomes and the advancement of medical practices.
+    </p>
+  </div>
+</section>
 
 
-                
-
-            </details>
-
-
-           </container>
-
-           <container id="measurement">
-
-            <details>
-                <summary>Measurement</summary>
-
-                  <details>
-                    <summary>Length</summary>
-
-                    <select name="length" id="fromUnitL">
-                        <option value="km">Kilometer(km)</option>
-                        <option value="m">Meter(m)</option>
-                        <option value="cm">Centimeter(cm)</option>
-                        <option value="mm">Milimeter(mm)</option>
-                        <option value="microm">Micrometer (&micro;m)</option>
-                        <option value="nm">Nanometer(nm)</option>
-                        <option value="mile">Mile</option>
-                        <option value="yard">Yard</option>
-                        <option value="foot">Foot</option>
-                        <option value="inch">Inch</option>
-                        
-                            
-                    </select>
-                     <input type="number" id="lengthInput" placeholder="Enter a Value Here">  =
-                      
-                     <select name="length" id="toUnitL">
-                        <option value="km">Kilometer(km)</option>
-                        <option value="m">Meter(m)</option>
-                        <option value="cm">Centimeter(cm)</option>
-                        <option value="mm">Milimeter(mm)</option>
-                        <option value="microm">Micrometer(&micro;m)</option>
-                        <option value="nm">Nanometer(nm)</option>
-                        <option value="mile">Mile(mi)</option>
-                        <option value="yard">Yard(yd)</option>
-                        <option value="foot">Foot(ft)</option>
-                        <option value="inch">Inch(in)</option>
-                    </select>
-
-                     <input type="number" id="lengthOutput" readonly placeholder="converted Value">
-
-                    <button id="convertLength">CONVERT</button>
-                     
-                  </details>
-
-                  <details>
-                    <summary>Volume</summary>
-
-                    <select name="volume" id="fromUnitV">
-                        <option value="l">Liter(L)</option>
-                        <option value="cl">Centiliter (cl)</option>
-                        <option value="dl">Deciliter (dl)</option>
-                        <option value="ml">Mililiter(mL)</option>
-                        <option value="kl">Kiloliter(kL)</option>
-                        <option value="gallon">Gallon</option>
-                        <option value="quart">Quart</option>
-                        <option value="pint">Pint</option>
-                        <option value="fluid">Fluid ounce</option>
-                        
-                       
-                    </select>
-                     <input type="number" id="volumeInput">  =
-                      
-                     <select name="volume" id="toUnitV">
-                        <option value="l">Liter(L)</option>
-                        <option value="cl">Centiliter (cl)</option>
-                        <option value="dl">Deciliter (dl)</option>
-                        <option value="ml">Mililiter(mL)</option>
-                        <option value="kl">Kiloliter(kL)</option>
-                        <option value="gallon">Gallon</option>
-                        <option value="quart">Quart</option>
-                        <option value="pint">Pint</option>
-                        <option value="fluid">Fluid ounce</option>
-                       
-                    </select>
-                    
-                    
-
-                     <input type="number" id="volumeOutput">
-
-                    <button id="convertVolume">CONVERT</button>
-                     
-                  </details>
-     
-
-                  <details>
-                    <summary>Weight</summary>
-
-                    <select name="weight" id="weight">
-                        <option value="mt">MegaTonne(mt)</option>
-                        <option value="t">Tonne(t)</option>
-                        <option value="kg">Kilogram(kg)</option>
-                        <option value="g">Gram(g)</option>
-                        <option value="mg">Milligram(mg)</option>
-                        <option value="microgram">Microgram(&micro;g)</option>
-                        <option value="tt">Ton(tt)</option>
-                        <option value="ib">Pound(ib)</option>
-                        <option value="oz">Ounce(oz)</option>
-                    </select>
-                     <input type="number" id="weightInput">  =
-                      
-                     <select name="weight" id="weight">
-                        <option value="mt">MegaTonne(mt)</option>
-                        <option value="t">Tonne(t)</option>
-                        <option value="kg">Kilogram(kg)</option>
-                        <option value="g">Gram(g)</option>
-                        <option value="mg">Milligram(mg)</option>
-                        <option value="microgram">Microgram(&micro;g)</option>
-                        <option value="tt">Ton(tt)</option>
-                        <option value="ib">Pound(ib)</option>
-                        <option value="oz">Ounce(oz)</option>
-                    </select>
-                    
-                    
-
-                     <input type="number" id="weightOutput">
-
-                    <button onclick="copyValueWeight()">CONVERT</button>
-                     
-                  </details>
-
-                  <details>
-                    <summary>Temperature</summary>
-
-                    <select name="temperature" id="temparature">
-                        <option value="celsuis">Celsuis( &deg;C)</option>
-                        <option value="farenheit">Fahrenheit(&deg;F)</option>
-                        <option value="kelvin">Kelvin(k)</option>
-                        <option value="rankine">Rankine(&deg;R)</option>
-                        
-                       
-                    </select>
-                     <input type="number" id="temperatureInput">  =
-                     
-                     <select name="temperature" id="temparature">
-                        <option value="celsuis">Celsuis( &deg;C)</option>
-                        <option value="farenheit">Fahrenheit(&deg;F)</option>
-                        <option value="kelvin">Kelvin(k)</option>
-                        <option value="rankine">Rankine(&deg;R)</option>
-                        
-                       
-                    </select>
-
-                     <input type="number" id="temperatureOutput">
-
-                    <button onclick="copyValueTemperature()">CONVERT</button>
-                     
-                  </details>
+  <section class="features reveal">
+    <div class="feature">
+      <i class="fas fa-rocket fa-bounce " style="font-size:50px" ></i>
+      <h2> Our Mission</h2>
+         <p><span>Medsphere</span> Healthcare Ltd is on a mission to enhance the quality of healthcare in Africa. <br>
+            by providing unsurpassing medical devices and healthcare solutions. We strive to be the lifeline
+            that connects medical innovation to patients care.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-eye" style="font-size:50px;"></i>
+      <h2> Our Vision</h2>
+      <p>We envision a future where we are the leading choice in  healthcare and our affiliated segments
+            by setting a new standard in quality customer satisfaction.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-hands-helping " style="font-size:50px;"></i>
+      <h2>Values</h2>
+      <p>Quality, Innovation, Reliability, Integrity, Professionalism and Excellence — Serves as the cornerstone values 
+            of this enterprise..</p>
+    </div>
+  </section>
 
 
-                
+  
+<div class="about-container" > 
+  <div class="slider" id="slider">
+    <!-- Mission -->
+    <div class="slide">
+      <div class="slide-content" id="mission">
+       <h2>Consultation</h2> 
+<p>
+  <span>Medsphere</span> Healthcare Ltd prioritizes customer satisfaction and delivers high-quality, patient-centered services.  
+  Our consultation process is driven by expert medical knowledge, modern technology, and genuine care — ensuring every client receives tailored advice, prompt attention, and trusted healthcare solutions.  
+  Whether it's in-person or virtual, your health is our priority.
+</p>
+ </div>
 
-            </details>
 
-            
+      <div class="slide-image">
+        <img src="" alt="consultation Image" />
+      </div>
+    </div>
 
+    <!-- Vision -->
+    <div class="slide">
+      <div class="slide-content" id="vision">
+       <h2>Servicing & Installation</h2>
+      <p>
+  At <span>Medsphere</span> Healthcare Ltd, we specialize in the professional installation and comprehensive servicing of a wide range of medical equipment.  
+  Our team of certified biomedical engineers ensures that every device is installed with precision and maintained to meet global safety and performance standards.  
+ </p>
+      </div>
+      <div class="slide-image">
+        <img src="" alt="servicing Image" />
+      </div>
+    </div>
 
-           </container>
+    <!-- Values -->
+    <div class="slide" id="value">
+      <div class="slide-content">
+       <h2>Maintenance</h2>
+<p>
+  At <span>Medsphere</span> Healthcare Ltd, we understand that medical equipment reliability is non-negotiable.  
+  Our maintenance services are designed to prevent breakdowns, extend equipment lifespan, and ensure optimal performance across all healthcare environments.  
+</p>
+      </div>
+      <div class="slide-image">
+        <img src="" alt="maintenace Image" />
+      </div>
+    </div>
+  </div>
 
-     </section>
+  <!-- Navigation Dots -->
+  <div class="dots">
+    <div class="dot active" onclick="goToSlide(0)"></div>
+    <div class="dot" onclick="goToSlide(1)"></div>
+    <div class="dot" onclick="goToSlide(2)"></div>
+  </div>
+</div>
 
-            
+  <footer>
+    <p>&copy; 2025 Medphere Healthcare LTD. All rights reserved.</p>
+  </footer>
 
-
-     <script src="script.js"></script>
+  <script src="script.js">
+   
+  </script>
 </body>
 </html>
-
-<!-- i want you to make this code convert the currencies according to live updates from the api implemented, and work the measurement conversion too  <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Converter</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/swiper-bundle.min.css"/>
-        <link rel="stylesheet" href="shopping.css">
-        <scrip src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
-    </head>
-    <body>
-    
-        <header>
-            
-            <h2>99<span>converter.com</span></h2>
-    
-            <h4>convert anything and everthing everytime</h4>
-    
-            <div class="nav">
-                <a href="#">HOME</a>
-                <a href="#">ABOUT</a>
-                <a href="#">SUBSCRIBE</a>
-                <a href="#">CONTACT</a>
-                <a href="#">SIGN UP</a>
-            </div>
-    
-        </header>
-        
-           <section>
-               <container id="currency">
-    
-                <details>
-                    <summary>Currency Converter</summary>
-    
-                      <details>
-                        <summary>Fiat Currency</summary>
-    
-                        <select name="fiat" id="fiat">
-                            <option value="usd">USD</option>
-                            <option value="pounds">POUNDS</option>
-                            <option value="euro">EURO</option>
-                            <option value="franc">FRANC</option>
-                            <option value="yen">YEN</option>
-                            <option value="won">WON</option>
-                            <option value="naira">NAIRA</option>
-                        </select>
-                         <input type="number" id="usd">  =
-                          
-                         <select name="fiat" id="fiat">
-                            <option value="usd">USD</option>
-                            <option value="pounds">POUNDS</option>
-                            <option value="euro">EURO</option>
-                            <option value="franc">FRANC</option>
-                            <option value="yen">YEN</option>
-                            <option value="won">WON</option>
-                            <option value="naira">NAIRA</option>
-                        </select>
-    
-                         <input type="number" id="output">
-    
-                        <button onclick="copyValue()">CONVERT</button>
-                         
-                      </details>
-    
-                      <details>
-                        <summary>Crypto currency</summary>
-    
-                        <select name="Crypto" id="Crypto">
-                            <option value="btc">BITCOIN(BTC)</option>
-                            <option value="eth">ETHEREUM(ETH)</option>
-                            <option value="usdt">TETHER(USDT)</option>
-                            <option value="xrp">XRP(XRP)</option>
-                            <option value="bnb">BNB(BNB)</option>
-                            <option value="sol">SOLANA(SOL)</option>
-                            <option value="doge">DOGECOIN(DOGE)</option>
-                            <option value="usdc">USDC(USDC)</option>
-                            <option value="trx">TRON(TRX)</option>
-                        </select>
-                         <input type="number" id="CryptoInput">  =
-                          
-                         <select name="fiat" id="fiatCrypto">
-                            <option value="usd">USD</option>
-                            <option value="btc">BITCOIN(BTC)</option>
-                            <option value="eth">ETHEREUM(ETH)</option>
-                            <option value="usdt">TETHER(USDT)</option>
-                            <option value="franc">XRP(XRP)</option>
-                            <option value="bnb">BNB(BNB)</option>
-                            <option value="sol">SOLANA(SOL)</option>
-                            <option value="doge">DOGECOIN(DOGE)</option>
-                            <option value="naira">USDC(USDC)</option>
-                            <option value="trx">TRON(TRX)</option>
-                            <option value="pounds">POUNDS</option>
-                            <option value="euro">EURO</option>
-                            <option value="franc">FRANC</option>
-                            <option value="yen">YEN</option>
-                            <option value="won">WON</option>
-                            <option value="naira">NAIRA</option>
-                        </select>
-    
-                         <input type="number" id="output">
-    
-                        <button onclick="copyValueCrypto()">CONVERT</button>
-                         
-                      </details>
-    
-                      <details>
-                        <summary>Precious Metals</summary>
-    
-                        <select name="metals" id="metals">
-                            <option value="gold">GOLD(XAU)</option>
-                            <option value="silver">SILVER(XAG)</option>
-                            
-                        </select>
-                         <input type="number" id="usd">  =
-                          
-                         <select name="fiatGold" id="fiatGold">
-                            <option value="usd">USD</option>
-                            <option value="pounds">POUNDS</option>
-                            <option value="euro">EURO</option>
-                            <option value="franc">FRANC</option>
-                            <option value="yen">YEN</option>
-                            <option value="won">WON</option>
-                            <option value="naira">NAIRA</option>
-                        </select>
-    
-                         <input type="number" id="output">
-    
-                        <button onclick="copyValueMetals()">CONVERT</button>
-                         
-                      </details>
-    
-    
-                    
-    
-                </details>
-    
-    
-               </container>
-    
-               <container id="measuremnt">
-    
-                <details>
-                    <summary>Measurement</summary>
-    
-                      <details>
-                        <summary>Length</summary>
-    
-                        <select name="length" id="length">
-                            <option value="km">Kilometer(km)</option>
-                            <option value="m">Meter(m)</option>
-                            <option value="cm">Centimeter(cm)</option>
-                            <option value="mm">Milimeter(mm)</option>
-                            <option value="microm">Micrometer (&micro;m)</option>
-                            <option value="nm">Nanometer(nm)</option>
-                            <option value="mile">Mile</option>
-                            <option value="yard">Yard</option>
-                            <option value="foot">Foot</option>
-                            <option value="inch">Inch</option>
-                            
-                                
-                        </select>
-                         <input type="number" id="usd">  =
-                          
-                         <select name="length" id="length">
-                            <option value="km">Kilometer(km)</option>
-                            <option value="m">Meter(m)</option>
-                            <option value="cm">Centimeter(cm)</option>
-                            <option value="mm">Milimeter(mm)</option>
-                            <option value="microm">Micrometer (&micro;m)</option>
-                            <option value="nm">Nanometer(nm)</option>
-                            <option value="mile">Mile</option>
-                            <option value="yard">Yard</option>
-                            <option value="foot">Foot</option>
-                            <option value="inch">Inch</option>
-                        </select>
-    
-                         <input type="number" id="outputLength">
-    
-                        <button onclick="copyValueLength()">CONVERT</button>
-                         
-                      </details>
-    
-                      <details>
-                        <summary>Volume</summary>
-    
-                        <select name="volume" id="volume">
-                            <option value="l">Liter(L)</option>
-                            <option value="ml">Mililiter(mL)</option>
-                            <option value="kl">Kiloliter(kL)</option>
-                            <option value="gallon">Gallon</option>
-                            <option value="quart">Quart</option>
-                            <option value="pint">Pint</option>
-                            <option value="fluid">Fluid ounce</option>
-                           
-                        </select>
-                         <input type="number" id="volumeInput">  =
-                          
-                         <select name="volume" id="volume">
-                            <option value="l">Liter(L)</option>
-                            <option value="ml">Mililiter(mL)</option>
-                            <option value="kl">Kiloliter(kL)</option>
-                            <option value="gallon">Gallon</option>
-                            <option value="quart">Quart</option>
-                            <option value="pint">Pint</option>
-                            <option value="fluid">Fluid ounce</option>
-                           
-                        </select>
-                        
-                        
-    
-                         <input type="number" id="volumeOutput">
-    
-                        <button onclick="copyValueVolume()">CONVERT</button>
-                         
-                      </details>
-         
-    
-                      <details>
-                        <summary>Weight</summary>
-    
-                        <select name="weight" id="weight">
-                            <option value="mt">MegaTonne(mt)</option>
-                            <option value="t">Tonne(t)</option>
-                            <option value="kg">Kilogram(kg)</option>
-                            <option value="g">Gram(g)</option>
-                            <option value="mg">Milligram(mg)</option>
-                            <option value="microgram">Microgram(&micro;g)</option>
-                            <option value="tt">Ton(tt)</option>
-                            <option value="ib">Pound(ib)</option>
-                            <option value="oz">Ounce(oz)</option>
-                        </select>
-                         <input type="number" id="weightInput">  =
-                          
-                         <select name="weight" id="weight">
-                            <option value="mt">MegaTonne(mt)</option>
-                            <option value="t">Tonne(t)</option>
-                            <option value="kg">Kilogram(kg)</option>
-                            <option value="g">Gram(g)</option>
-                            <option value="mg">Milligram(mg)</option>
-                            <option value="microgram">Microgram(&micro;g)</option>
-                            <option value="tt">Ton(tt)</option>
-                            <option value="ib">Pound(ib)</option>
-                            <option value="oz">Ounce(oz)</option>
-                        </select>
-                        
-                        
-    
-                         <input type="number" id="weightOutput">
-    
-                        <button onclick="copyValueWeight()">CONVERT</button>
-                         
-                      </details>
-    
-                      <details>
-                        <summary>Temperature</summary>
-    
-                        <select name="temperature" id="temparature">
-                            <option value="celsuis">Celsuis( &deg;C)</option>
-                            <option value="farenheit">Fahrenheit(&deg;F)</option>
-                            <option value="kelvin">Kelvin(k)</option>
-                            <option value="rankine">Rankine(&deg;R)</option>
-                            
-                           
-                        </select>
-                         <input type="number" id="temperatureInput">  =
-                         
-                         <select name="temperature" id="temparature">
-                            <option value="celsuis">Celsuis( &deg;C)</option>
-                            <option value="farenheit">Fahrenheit(&deg;F)</option>
-                            <option value="kelvin">Kelvin(k)</option>
-                            <option value="rankine">Rankine(&deg;R)</option>
-                            
-                           
-                        </select>
-    
-                         <input type="number" id="temperatureOutput">
-    
-                        <button onclick="copyValueTemperature()">CONVERT</button>
-                         
-                      </details>
-    
-    
-                    
-    
-                </details>
-    
-                
-    
-    
-               </container>
-    
-         </section>
-    
-         <script src="script.js"></script>
-    </body>
-    </html>    
-    
-    
-    const apiUrl = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd,ngn,ghs";
-    
-    async function fetchCryptoPrices() {
-        try{
-            const response = await fetch(apiUrl);
-            const data = await response.json();
-            //add value to front end here
-        } catch (error) {
-            console.error("error fetching crypto data:", error);
-        }
-        
-    }
-    setInterval(fetchCryptoPrices, 300000); //refresh data every 5 minutes
-    
-    fetchCryptoPrices(); -->
