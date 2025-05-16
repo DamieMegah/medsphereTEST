@@ -1,0 +1,673 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <scrip src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+           <h2>99converter<span>.com</span></h2>
+
+          <h4>Convert anything anytime, anywhere...</h4>
+        </div>
+
+        <div class="nav">
+            <div class="anchor">
+              <a href="#">HOME <span>&#8594;</span></a>
+              <a href="#">FILE CONVERTER <span>&#8594;</span></a>
+              <a href="#">CURRENCY CONVERTER <span>&#8594;</span></a>
+              <a href="#">UNIT CONVERTER<span>&#8594;</span></a>
+              <a href="#">SUPPORT <span>&#8594;</span></a>
+          </div>
+        </div>
+
+   
+        
+
+        <div class="hero reveal" id="hero">
+            <div class="hero-bg active" id="bg1"><img src="images/m-virtuals.png" alt="Background 1"></div>
+            <div class="hero-bg" id="bg2"><img src="images/polering (1).png" alt="Background 2"></div>
+            <div class="hero-bg" id="bg3"><img src="images/shopping.png" alt="Background 3"></div>
+            <div class="hero-bg" id="bg3"><img src="images/school (1).png" alt="Background 3"></div>
+
+            <h2 id="hero-heading"></h2>
+            <p id="hero-text"></p>
+            <button class="cta-btn" id="cta-btn">Get Started</button>
+        </div>
+
+        
+    <div class="ham-nav">
+      <div class="ham-menu">
+         <span ></span>
+         <span ></span>
+         <span ></span>
+      </div>
+    </div>
+
+    </header>
+    
+       <section class="body">
+
+         <div class="file-container">
+            <form action="">
+              <label for="input-file">File  Converter</label>
+              <input type="file" id="input-file" name="input-file"><br>
+              <label for="input-format">Select File Format:</label>
+              <select name="input-format" id="input-format">
+                <option value="pdf">PDF</option>
+                <option value="docx">DOCX</option>
+                <option value="txt">TXT</option>
+                <option value="odt">ODT</option>
+              </select>
+              
+              <label for="output-format">Select New Format:</label>
+              <select name="output-format" id="output-format">
+                <option value="pdf">PDF</option>
+                <option value="docx">DOCX</option>
+                <option value="txt">TXT</option>
+                <option value="odt">ODT</option>
+              </select>
+
+              <button type="submit">Convert</button>
+
+            </form>
+
+         </div>
+
+
+
+           <container id="currency">
+
+            <details>
+                <summary>Currency Converter</summary>
+
+                  <details>
+                    <summary>Fiat Currency</summary>
+
+                    <select name="fiat" id="fiat">
+                        <option value="usd">USD</option>
+                        <option value="pounds">POUNDS</option>
+                        <option value="euro">EURO</option>
+                        <option value="franc">FRANC</option>
+                        <option value="yen">YEN</option>
+                        <option value="won">WON</option>
+                        <option value="naira">NAIRA</option>
+                    </select>
+                     <input type="number" id="usd">  =
+                      
+                     <select name="fiat" id="fiat">
+                        <option value="usd">USD</option>
+                        <option value="pounds">POUNDS</option>
+                        <option value="euro">EURO</option>
+                        <option value="franc">FRANC</option>
+                        <option value="yen">YEN</option>
+                        <option value="won">WON</option>
+                        <option value="naira">NAIRA</option>
+                    </select>
+
+                     <input type="number" id="output">
+
+                    <button onclick="copyValue()">CONVERT</button>
+                     
+                  </details>
+
+                  <details>
+                    <summary>Crypto currency</summary>
+
+                    <select name="Crypto" id="Crypto">
+                        <option value="btc">BITCOIN(BTC)</option>
+                        <option value="eth">ETHEREUM(ETH)</option>
+                        <option value="usdt">TETHER(USDT)</option>
+                        <option value="xrp">XRP(XRP)</option>
+                        <option value="bnb">BNB(BNB)</option>
+                        <option value="sol">SOLANA(SOL)</option>
+                        <option value="doge">DOGECOIN(DOGE)</option>
+                        <option value="usdc">USDC(USDC)</option>
+                        <option value="trx">TRON(TRX)</option>
+                    </select>
+                     <input type="number" id="CryptoInput">  =
+                      
+                     <select name="fiat" id="fiatCrypto">
+                        <option value="usd">USD</option>
+                        <option value="btc">BITCOIN(BTC)</option>
+                        <option value="eth">ETHEREUM(ETH)</option>
+                        <option value="usdt">TETHER(USDT)</option>
+                        <option value="franc">XRP(XRP)</option>
+                        <option value="bnb">BNB(BNB)</option>
+                        <option value="sol">SOLANA(SOL)</option>
+                        <option value="doge">DOGECOIN(DOGE)</option>
+                        <option value="naira">USDC(USDC)</option>
+                        <option value="trx">TRON(TRX)</option>
+                        <option value="pounds">POUNDS</option>
+                        <option value="euro">EURO</option>
+                        <option value="franc">FRANC</option>
+                        <option value="yen">YEN</option>
+                        <option value="won">WON</option>
+                        <option value="naira">NAIRA</option>
+                    </select>
+
+                     <input type="number" id="output">
+
+                    <button onclick="copyValueCrypto()">CONVERT</button>
+                     
+                  </details>
+
+                  <details>
+                    <summary>Precious Metals</summary>
+
+                    <select name="metals" id="metals">
+                        <option value="gold">GOLD(XAU)</option>
+                        <option value="silver">SILVER(XAG)</option>
+                        
+                    </select>
+                     <input type="number" id="usd">  =
+                      
+                     <select name="fiatGold" id="fiatGold">
+                        <option value="usd">USD</option>
+                        <option value="pounds">POUNDS</option>
+                        <option value="euro">EURO</option>
+                        <option value="franc">FRANC</option>
+                        <option value="yen">YEN</option>
+                        <option value="won">WON</option>
+                        <option value="naira">NAIRA</option>
+                    </select>
+
+                     <input type="number" id="output">
+
+                    <button onclick="copyValueMetals()">CONVERT</button>
+                     
+                  </details>
+
+
+                
+
+            </details>
+
+
+           </container>
+
+           <container id="measurement">
+
+            <details>
+                <summary>Measurement</summary>
+
+                  <details>
+                    <summary>Length</summary>
+
+                    <select name="length" id="fromUnitL">
+                        <option value="km">Kilometer(km)</option>
+                        <option value="m">Meter(m)</option>
+                        <option value="cm">Centimeter(cm)</option>
+                        <option value="mm">Milimeter(mm)</option>
+                        <option value="microm">Micrometer (&micro;m)</option>
+                        <option value="nm">Nanometer(nm)</option>
+                        <option value="mile">Mile</option>
+                        <option value="yard">Yard</option>
+                        <option value="foot">Foot</option>
+                        <option value="inch">Inch</option>
+                        
+                            
+                    </select>
+                     <input type="number" id="lengthInput" placeholder="Enter a Value Here">  =
+                      
+                     <select name="length" id="toUnitL">
+                        <option value="km">Kilometer(km)</option>
+                        <option value="m">Meter(m)</option>
+                        <option value="cm">Centimeter(cm)</option>
+                        <option value="mm">Milimeter(mm)</option>
+                        <option value="microm">Micrometer(&micro;m)</option>
+                        <option value="nm">Nanometer(nm)</option>
+                        <option value="mile">Mile(mi)</option>
+                        <option value="yard">Yard(yd)</option>
+                        <option value="foot">Foot(ft)</option>
+                        <option value="inch">Inch(in)</option>
+                    </select>
+
+                     <input type="number" id="lengthOutput" readonly placeholder="converted Value">
+
+                    <button id="convertLength">CONVERT</button>
+                     
+                  </details>
+
+                  <details>
+                    <summary>Volume</summary>
+
+                    <select name="volume" id="fromUnitV">
+                        <option value="l">Liter(L)</option>
+                        <option value="cl">Centiliter (cl)</option>
+                        <option value="dl">Deciliter (dl)</option>
+                        <option value="ml">Mililiter(mL)</option>
+                        <option value="kl">Kiloliter(kL)</option>
+                        <option value="gallon">Gallon</option>
+                        <option value="quart">Quart</option>
+                        <option value="pint">Pint</option>
+                        <option value="fluid">Fluid ounce</option>
+                        
+                       
+                    </select>
+                     <input type="number" id="volumeInput">  =
+                      
+                     <select name="volume" id="toUnitV">
+                        <option value="l">Liter(L)</option>
+                        <option value="cl">Centiliter (cl)</option>
+                        <option value="dl">Deciliter (dl)</option>
+                        <option value="ml">Mililiter(mL)</option>
+                        <option value="kl">Kiloliter(kL)</option>
+                        <option value="gallon">Gallon</option>
+                        <option value="quart">Quart</option>
+                        <option value="pint">Pint</option>
+                        <option value="fluid">Fluid ounce</option>
+                       
+                    </select>
+                    
+                    
+
+                     <input type="number" id="volumeOutput">
+
+                    <button id="convertVolume">CONVERT</button>
+                     
+                  </details>
+     
+
+                  <details>
+                    <summary>Weight</summary>
+
+                    <select name="weight" id="weight">
+                        <option value="mt">MegaTonne(mt)</option>
+                        <option value="t">Tonne(t)</option>
+                        <option value="kg">Kilogram(kg)</option>
+                        <option value="g">Gram(g)</option>
+                        <option value="mg">Milligram(mg)</option>
+                        <option value="microgram">Microgram(&micro;g)</option>
+                        <option value="tt">Ton(tt)</option>
+                        <option value="ib">Pound(ib)</option>
+                        <option value="oz">Ounce(oz)</option>
+                    </select>
+                     <input type="number" id="weightInput">  =
+                      
+                     <select name="weight" id="weight">
+                        <option value="mt">MegaTonne(mt)</option>
+                        <option value="t">Tonne(t)</option>
+                        <option value="kg">Kilogram(kg)</option>
+                        <option value="g">Gram(g)</option>
+                        <option value="mg">Milligram(mg)</option>
+                        <option value="microgram">Microgram(&micro;g)</option>
+                        <option value="tt">Ton(tt)</option>
+                        <option value="ib">Pound(ib)</option>
+                        <option value="oz">Ounce(oz)</option>
+                    </select>
+                    
+                    
+
+                     <input type="number" id="weightOutput">
+
+                    <button onclick="copyValueWeight()">CONVERT</button>
+                     
+                  </details>
+
+                  <details>
+                    <summary>Temperature</summary>
+
+                    <select name="temperature" id="temparature">
+                        <option value="celsuis">Celsuis( &deg;C)</option>
+                        <option value="farenheit">Fahrenheit(&deg;F)</option>
+                        <option value="kelvin">Kelvin(k)</option>
+                        <option value="rankine">Rankine(&deg;R)</option>
+                        
+                       
+                    </select>
+                     <input type="number" id="temperatureInput">  =
+                     
+                     <select name="temperature" id="temparature">
+                        <option value="celsuis">Celsuis( &deg;C)</option>
+                        <option value="farenheit">Fahrenheit(&deg;F)</option>
+                        <option value="kelvin">Kelvin(k)</option>
+                        <option value="rankine">Rankine(&deg;R)</option>
+                        
+                       
+                    </select>
+
+                     <input type="number" id="temperatureOutput">
+
+                    <button onclick="copyValueTemperature()">CONVERT</button>
+                     
+                  </details>
+
+
+                
+
+            </details>
+
+            
+
+
+           </container>
+
+     </section>
+
+            
+
+
+     <script src="script.js"></script>
+</body>
+</html>
+
+<!-- i want you to make this code convert the currencies according to live updates from the api implemented, and work the measurement conversion too  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Converter</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="shopping.css">
+        <scrip src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    </head>
+    <body>
+    
+        <header>
+            
+            <h2>99<span>converter.com</span></h2>
+    
+            <h4>convert anything and everthing everytime</h4>
+    
+            <div class="nav">
+                <a href="#">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">SUBSCRIBE</a>
+                <a href="#">CONTACT</a>
+                <a href="#">SIGN UP</a>
+            </div>
+    
+        </header>
+        
+           <section>
+               <container id="currency">
+    
+                <details>
+                    <summary>Currency Converter</summary>
+    
+                      <details>
+                        <summary>Fiat Currency</summary>
+    
+                        <select name="fiat" id="fiat">
+                            <option value="usd">USD</option>
+                            <option value="pounds">POUNDS</option>
+                            <option value="euro">EURO</option>
+                            <option value="franc">FRANC</option>
+                            <option value="yen">YEN</option>
+                            <option value="won">WON</option>
+                            <option value="naira">NAIRA</option>
+                        </select>
+                         <input type="number" id="usd">  =
+                          
+                         <select name="fiat" id="fiat">
+                            <option value="usd">USD</option>
+                            <option value="pounds">POUNDS</option>
+                            <option value="euro">EURO</option>
+                            <option value="franc">FRANC</option>
+                            <option value="yen">YEN</option>
+                            <option value="won">WON</option>
+                            <option value="naira">NAIRA</option>
+                        </select>
+    
+                         <input type="number" id="output">
+    
+                        <button onclick="copyValue()">CONVERT</button>
+                         
+                      </details>
+    
+                      <details>
+                        <summary>Crypto currency</summary>
+    
+                        <select name="Crypto" id="Crypto">
+                            <option value="btc">BITCOIN(BTC)</option>
+                            <option value="eth">ETHEREUM(ETH)</option>
+                            <option value="usdt">TETHER(USDT)</option>
+                            <option value="xrp">XRP(XRP)</option>
+                            <option value="bnb">BNB(BNB)</option>
+                            <option value="sol">SOLANA(SOL)</option>
+                            <option value="doge">DOGECOIN(DOGE)</option>
+                            <option value="usdc">USDC(USDC)</option>
+                            <option value="trx">TRON(TRX)</option>
+                        </select>
+                         <input type="number" id="CryptoInput">  =
+                          
+                         <select name="fiat" id="fiatCrypto">
+                            <option value="usd">USD</option>
+                            <option value="btc">BITCOIN(BTC)</option>
+                            <option value="eth">ETHEREUM(ETH)</option>
+                            <option value="usdt">TETHER(USDT)</option>
+                            <option value="franc">XRP(XRP)</option>
+                            <option value="bnb">BNB(BNB)</option>
+                            <option value="sol">SOLANA(SOL)</option>
+                            <option value="doge">DOGECOIN(DOGE)</option>
+                            <option value="naira">USDC(USDC)</option>
+                            <option value="trx">TRON(TRX)</option>
+                            <option value="pounds">POUNDS</option>
+                            <option value="euro">EURO</option>
+                            <option value="franc">FRANC</option>
+                            <option value="yen">YEN</option>
+                            <option value="won">WON</option>
+                            <option value="naira">NAIRA</option>
+                        </select>
+    
+                         <input type="number" id="output">
+    
+                        <button onclick="copyValueCrypto()">CONVERT</button>
+                         
+                      </details>
+    
+                      <details>
+                        <summary>Precious Metals</summary>
+    
+                        <select name="metals" id="metals">
+                            <option value="gold">GOLD(XAU)</option>
+                            <option value="silver">SILVER(XAG)</option>
+                            
+                        </select>
+                         <input type="number" id="usd">  =
+                          
+                         <select name="fiatGold" id="fiatGold">
+                            <option value="usd">USD</option>
+                            <option value="pounds">POUNDS</option>
+                            <option value="euro">EURO</option>
+                            <option value="franc">FRANC</option>
+                            <option value="yen">YEN</option>
+                            <option value="won">WON</option>
+                            <option value="naira">NAIRA</option>
+                        </select>
+    
+                         <input type="number" id="output">
+    
+                        <button onclick="copyValueMetals()">CONVERT</button>
+                         
+                      </details>
+    
+    
+                    
+    
+                </details>
+    
+    
+               </container>
+    
+               <container id="measuremnt">
+    
+                <details>
+                    <summary>Measurement</summary>
+    
+                      <details>
+                        <summary>Length</summary>
+    
+                        <select name="length" id="length">
+                            <option value="km">Kilometer(km)</option>
+                            <option value="m">Meter(m)</option>
+                            <option value="cm">Centimeter(cm)</option>
+                            <option value="mm">Milimeter(mm)</option>
+                            <option value="microm">Micrometer (&micro;m)</option>
+                            <option value="nm">Nanometer(nm)</option>
+                            <option value="mile">Mile</option>
+                            <option value="yard">Yard</option>
+                            <option value="foot">Foot</option>
+                            <option value="inch">Inch</option>
+                            
+                                
+                        </select>
+                         <input type="number" id="usd">  =
+                          
+                         <select name="length" id="length">
+                            <option value="km">Kilometer(km)</option>
+                            <option value="m">Meter(m)</option>
+                            <option value="cm">Centimeter(cm)</option>
+                            <option value="mm">Milimeter(mm)</option>
+                            <option value="microm">Micrometer (&micro;m)</option>
+                            <option value="nm">Nanometer(nm)</option>
+                            <option value="mile">Mile</option>
+                            <option value="yard">Yard</option>
+                            <option value="foot">Foot</option>
+                            <option value="inch">Inch</option>
+                        </select>
+    
+                         <input type="number" id="outputLength">
+    
+                        <button onclick="copyValueLength()">CONVERT</button>
+                         
+                      </details>
+    
+                      <details>
+                        <summary>Volume</summary>
+    
+                        <select name="volume" id="volume">
+                            <option value="l">Liter(L)</option>
+                            <option value="ml">Mililiter(mL)</option>
+                            <option value="kl">Kiloliter(kL)</option>
+                            <option value="gallon">Gallon</option>
+                            <option value="quart">Quart</option>
+                            <option value="pint">Pint</option>
+                            <option value="fluid">Fluid ounce</option>
+                           
+                        </select>
+                         <input type="number" id="volumeInput">  =
+                          
+                         <select name="volume" id="volume">
+                            <option value="l">Liter(L)</option>
+                            <option value="ml">Mililiter(mL)</option>
+                            <option value="kl">Kiloliter(kL)</option>
+                            <option value="gallon">Gallon</option>
+                            <option value="quart">Quart</option>
+                            <option value="pint">Pint</option>
+                            <option value="fluid">Fluid ounce</option>
+                           
+                        </select>
+                        
+                        
+    
+                         <input type="number" id="volumeOutput">
+    
+                        <button onclick="copyValueVolume()">CONVERT</button>
+                         
+                      </details>
+         
+    
+                      <details>
+                        <summary>Weight</summary>
+    
+                        <select name="weight" id="weight">
+                            <option value="mt">MegaTonne(mt)</option>
+                            <option value="t">Tonne(t)</option>
+                            <option value="kg">Kilogram(kg)</option>
+                            <option value="g">Gram(g)</option>
+                            <option value="mg">Milligram(mg)</option>
+                            <option value="microgram">Microgram(&micro;g)</option>
+                            <option value="tt">Ton(tt)</option>
+                            <option value="ib">Pound(ib)</option>
+                            <option value="oz">Ounce(oz)</option>
+                        </select>
+                         <input type="number" id="weightInput">  =
+                          
+                         <select name="weight" id="weight">
+                            <option value="mt">MegaTonne(mt)</option>
+                            <option value="t">Tonne(t)</option>
+                            <option value="kg">Kilogram(kg)</option>
+                            <option value="g">Gram(g)</option>
+                            <option value="mg">Milligram(mg)</option>
+                            <option value="microgram">Microgram(&micro;g)</option>
+                            <option value="tt">Ton(tt)</option>
+                            <option value="ib">Pound(ib)</option>
+                            <option value="oz">Ounce(oz)</option>
+                        </select>
+                        
+                        
+    
+                         <input type="number" id="weightOutput">
+    
+                        <button onclick="copyValueWeight()">CONVERT</button>
+                         
+                      </details>
+    
+                      <details>
+                        <summary>Temperature</summary>
+    
+                        <select name="temperature" id="temparature">
+                            <option value="celsuis">Celsuis( &deg;C)</option>
+                            <option value="farenheit">Fahrenheit(&deg;F)</option>
+                            <option value="kelvin">Kelvin(k)</option>
+                            <option value="rankine">Rankine(&deg;R)</option>
+                            
+                           
+                        </select>
+                         <input type="number" id="temperatureInput">  =
+                         
+                         <select name="temperature" id="temparature">
+                            <option value="celsuis">Celsuis( &deg;C)</option>
+                            <option value="farenheit">Fahrenheit(&deg;F)</option>
+                            <option value="kelvin">Kelvin(k)</option>
+                            <option value="rankine">Rankine(&deg;R)</option>
+                            
+                           
+                        </select>
+    
+                         <input type="number" id="temperatureOutput">
+    
+                        <button onclick="copyValueTemperature()">CONVERT</button>
+                         
+                      </details>
+    
+    
+                    
+    
+                </details>
+    
+                
+    
+    
+               </container>
+    
+         </section>
+    
+         <script src="script.js"></script>
+    </body>
+    </html>    
+    
+    
+    const apiUrl = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd,ngn,ghs";
+    
+    async function fetchCryptoPrices() {
+        try{
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            //add value to front end here
+        } catch (error) {
+            console.error("error fetching crypto data:", error);
+        }
+        
+    }
+    setInterval(fetchCryptoPrices, 300000); //refresh data every 5 minutes
+    
+    fetchCryptoPrices(); -->
