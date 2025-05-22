@@ -8,6 +8,8 @@
      <link rel="stylesheet" href="css/font-awesome.css">
      <link rel="icon" href="images/logo2.jpg" type="images/jpg">
      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+     <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
      <link id="stylesheet" rel="stylesheet" href="style.css">
      <title>Medsphere</title>
   
@@ -91,7 +93,7 @@
 
 <section class="about-section1" id="about" >
       <div class="about-corner"></div>
-      <div class="about-content">
+      <div class="about-content" data-aos="zoom-in-up">
        <h2>About Us</h2>
         <p>
            <span>MedSphere</span> Healthcare Limited is a leading provider of essential medical equipment
@@ -110,20 +112,20 @@
 
 
   <section class="features reveal">
-    <div class="feature">
+    <div class="feature" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <i class="fas fa-rocket fa-bounce " style="font-size:50px" ></i>
       <h2> Our Mission</h2>
          <p><span>Medsphere</span> Healthcare Ltd is on a mission to enhance the quality of healthcare in Africa. <br>
             by providing unsurpassing medical devices and healthcare solutions. We strive to be the lifeline
             that connects medical innovation to patients care.</p>
     </div>
-    <div class="feature">
-      <i class="fas fa-eye" style="font-size:50px;"></i>
+    <div class="feature" data-aos="zoom-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+      <i class="fas fa-eye" style="font-size:50px;" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out"></i>
       <h2> Our Vision</h2>
       <p>We envision a future where we are the leading choice in  healthcare and our affiliated segments
             by setting a new standard in quality customer satisfaction.</p>
     </div>
-    <div class="feature">
+    <div class="feature" data-aos="flip-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <i class="fas fa-hands-helping " style="font-size:50px;"></i>
       <h2>Values</h2>
       <p>Quality, Innovation, Reliability, Integrity, Professionalism and Excellence — Serves as the cornerstone values 
@@ -189,12 +191,24 @@
   </div>
 </div>
 
-<!-- HTML -->
+
 <section class="products-section">
   <h2 class="section-title">Our Top Equipments</h2>
   <div class="products-grid">
     <!-- Product Card -->
-    <div class="product-card">
+
+     
+     <div class="product-card" data-aos="zoom-in-up">
+      <img src="images/SG-1.png" alt="Medical Equipment" />
+      <div class="overlay">
+        <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
+        <button class="icon-btn">Learn More</button>
+      </div>
+      <p class="product-name"> SG-1 | Blood Gas & Electrolyte Analyzer </p>
+    </div>
+
+
+    <div class="product-card" data-aos="zoom-in-up">
       <img src="images/SE1.jpg" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
@@ -204,7 +218,7 @@
       </p>
     </div>
 
-     <div class="product-card">
+     <div class="product-card" data-aos="zoom-in-up">
       <img src="images/SMT-30.jpg" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
@@ -213,7 +227,7 @@
       <p class="product-name">SMT-30 | 3-Part Auto Hematology Analyzer</p>
     </div>
      
-     <div class="product-card">
+     <div class="product-card" data-aos="zoom-in-up">
       <img src="images/SMT-50.png" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
@@ -223,7 +237,7 @@
     </div>
 
     
-     <div class="product-card">
+     <div class="product-card" data-aos="zoom-in-up">
       <img src="images/SMT-70.png" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
@@ -232,7 +246,7 @@
       <p class="product-name">SMT-70 | Semi-auto Chemistry Analyzer</p>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-aos="zoom-in-up">
       <img src="images/SMT-120.png" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
@@ -241,45 +255,67 @@
       <p class="product-name">SMT-120 | Biochemistry Analyzer</p>
     </div>
 
-     <div class="product-card">
-      <img src="images/CBS-50.WEBP" alt="Medical Equipment" />
+     <div class="product-card" data-aos="zoom-in-up">
+      <img src="images/CBS-50.webp" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
         <button class="icon-btn">Learn More</button>
       </div>
       <p class="product-name"> CBS-50 | Automatic electrolyte analyzer </p>
     </div>
+
+    
+     <div class="product-card" data-aos="zoom-in-up">
+      <img src="images/Dr Accu.webp" alt="Medical Equipment" />
+      <div class="overlay">
+        <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
+        <button class="icon-btn">Learn More</button>
+      </div>
+      <p class="product-name"> Dr Accu | Immunoassay Analyzer </p>
+    </div>
+
     <!-- Add more products here -->
   </div>
 </section>
 
 
 <!-- contact -->
+<section id="contact" class="contact-section" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-easing="ease-in-out">
+  <h2 data-aos="fade-down">Contact</h2>
 
-<section id="contact" class="contact-section">
-  <h2>Contact Us</h2>
-  <p class="subtext">Got a project or want to say hi? Reach out below 👇</p>
+  <div class="msg" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+    <form action="post" data-aos="fade-right">
+      <h3>We'd love to hear from you</h3><br>
+      <input type="text" id="E-mail/Tel" name="E-mail/Tel" required placeholder="Your Mail or Phone">
+      <input type="text" id="message" name="message" required placeholder="Your message here">
+      <button type="submit">Send</button>
+    </form>
+
+    <img src="images/contact.jpg" alt="Contact image" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+  </div>
 
   <div class="contact-info-horizontal">
-    <div class="contact-item">
+    <div class="contact-item" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <i class="fas fa-envelope"></i>
       <span>Email:</span>
-      <a href="mailto:customerservice.medsphere@outlook">customerservice.medsphere@outlook.com</a>
+      <a href="mailto:customerservice.medsphere@outlook.com">customerservice.medsphere@outlook.com</a>
     </div>
 
-    <div class="contact-item">
+    <div class="contact-item" data-aos="flip-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <i class="fas fa-phone"></i>
       <span>Phone:</span>
-      <a href="tel:+234704945339"> +234 704 945 3339,</a><a href="tel:+2347049413802">+234 704 941 3802</a>
+      <a href="tel:+2347049413802">+234 704 941 3802</a>
+      <a href="tel:+2347049453339">+234 704 945 3339</a>
     </div>
 
-    <div class="contact-item">
+    <div class="contact-item" data-aos="flip-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <i class="fab fa-whatsapp"></i>
       <span>WhatsApp:</span>
-      <a href="https://wa.me/2348012345678" target="_blank">Chat on WhatsApp</a>
+      <a href="https://wa.me/2347049413802" target="_blank">Chat on WhatsApp</a>
     </div>
   </div>
 </section>
+
 
 
 
@@ -292,7 +328,7 @@
       <h3>Our Partners</h3>
       <ul>
         <li>Seamaty</li>
-        <li>Assuretech</li>
+        <li>Assure tech</li>
         <li>Davinny</li>
         <li>Urinealyer</li>
       </ul>
@@ -301,19 +337,19 @@
     <!-- Contact Info -->
     <div class="footer-section">
       <h3>Reach Us</h3>
-      <p><strong>Email:</strong> NOTPROVIDED.ng</p>
+      <p><strong>Email:</strong> <a href="mailto:customerservice.medsphere@outlook">customerservice.medsphere@outlook.com</a></p>
       <p><strong>Phone:</strong> +234 704 941 3802</p>
-      <p><strong>Address:</strong> 123 NOTPROVIDED, Lagos</p>
+      <p><strong>Address:</strong> 14, Salvation Avenue Off Lucas street, Obawole, Ifako Ijaiye, Lagos, Nigeria.</p>
     </div>
 
     <!-- Social Media -->
     <div class="footer-section">
       <h3>Follow Us</h3>
       <div class="social-icons">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-x"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/16N58SpbUS/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.LinkedIn.com/company/medsphere-healthcare/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/medsphere_healthcare_limited/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </div>
@@ -321,12 +357,18 @@
   <!-- Bottom Footer -->
   <div class="footer-bottom">
     <p>&copy; <span id="year">2025</span> Medsphere All rights reserved.</p>
-    <p>Website designed by <strong style="color: var(--red)">DamieMegah</strong></p>
+    <p>Website designed by <small style="color: var(--red)">DamieMegah</small></p>
   </div>
 </footer>
 
   <script src="script.js">
    
   </script>
+  <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
