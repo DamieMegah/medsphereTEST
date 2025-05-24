@@ -680,10 +680,28 @@ header.navbar {
   line-height: 1.6;
 }
 
-.footer-bottom p small{
-font-style:italic;
+
+.footer-section p a{
+  color:var(--secondary-color);
+  text-decoration:none;
 }
 
+.footer-section p a:hover{
+  color:var(--red);
+  text-decoration:underline;
+}
+
+.footer-bottom p small{
+font-style:italic;
+ color:var(--red);
+ cursor:pointer;
+}
+
+
+.footer-bottom p small:hover{
+   color:var(--secondary-color);
+  text-decoration:underline;
+}
 .social-icons a {
   margin-right: 1rem;
   font-size: 1.5rem;
@@ -704,6 +722,7 @@ font-style:italic;
   font-size: 0.9rem;
   color: var(--secondary-color);
 }
+
 
 .social-icons a i {
   font-size: 1.8rem;
@@ -760,6 +779,21 @@ font-style:italic;
 }
 
 
+/* SCROLL UP BUTTON */
+.scroll-up {
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  background-color: rgba(255, 0, 0, 0.623);
+  color: var(--secondary-color);
+  font-size:1.5rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
 /* large Computers */
 
@@ -1092,6 +1126,9 @@ nav{
     align-items: center;
   }
 
+  .contact-item {
+    width:100%;
+  }
 
   
   .footer-container {

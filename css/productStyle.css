@@ -38,6 +38,7 @@ img {
   display: block;
 }
 
+
 header.navbar {
   position: fixed;
   top: 0;
@@ -50,6 +51,7 @@ header.navbar {
   padding: 1rem 2rem;
   box-shadow: var(--box-shadow);
   z-index: 1000;
+  
 }
 
 .logo img {
@@ -256,8 +258,8 @@ section{
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   font-family: var(--font-family);
   color: var(--text-color);
-  max-width: 500px;
-  margin: auto;
+  max-width: 100%;
+  margin: 2rem auto;
 }
 
 .contact h1 {
@@ -276,6 +278,16 @@ section{
   align-items: center;
   margin-bottom: 1rem;
   font-size: 1.1rem;
+}
+
+.contact-info a{
+  text-decoration: none;
+   color: var(--primary-color);
+   cursor:pointer;
+}
+
+.contact-info a:hover{
+  color:blue;
 }
 
 .contact-info i {
@@ -398,6 +410,32 @@ font-style:italic;
 }
 
 
+/* SCROLL UP BUTTON */
+
+#scrollUpBtn {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 999;
+  font-size: 1.5rem;
+  background-color: #e60000; /* Red theme */
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.3);
+  display: none;
+  transition: all 0.3s ease;
+}
+
+#scrollUpBtn:hover {
+  background-color: #cc0000;
+  transform: scale(1.1);
+}
+
+
 /* large Computers */
 
 @media (max-width:3200px){
@@ -441,6 +479,17 @@ font-style:italic;
 
 /* MOBILE RESPONSIVE */
 @media (max-width:768px) {
+ html{
+  font-size:80%;
+ }
+
+ 
+ body{
+     overflow-x: hidden;
+      width: 100%;
+ }
+  
+
   .menu-toggle {
     display: block;
   }
@@ -525,9 +574,10 @@ nav{
 
 
 section{
-  padding: 2rem 3rem;
+  padding: 2rem 0.5rem;
   margin-top:6rem;
 }
+
 
 .info{
   display:flex;
@@ -540,23 +590,31 @@ section{
   height:auto;
 }
 
+.features{
+  padding: 0 0;
+}
 
+.f1 h1{
+  margin-bottom:-5.5rem;
 }
 
 
-@media (max-width:390px){
-
-html{
-  font-size:82%;
+.features .img{
+   flex-direction:column;
+   gap:4rem;
 }
+
+.key-feature h1, .f1 h1{
+font-size:1.9rem;
+}
+.key-feature  .key-text span{
+   font-size:1rem;
+}
+
 }
 
 
  
-@media (max-width:320px){
-  
-
-}
 
 /* iphone 6plus/7/8 */
 @media (max-width:414px) and (max-height:736px) {
@@ -565,4 +623,7 @@ html{
   font-size:78%;
 }
   
+.f1 h1{
+  margin-bottom:1.5rem;
+}
 }

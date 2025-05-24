@@ -62,3 +62,23 @@
     }
   }, 5000);
     
+
+  // Scroll to Top Button
+   window.addEventListener('scroll', () => {
+  const btn = document.getElementById('scroll-Up');
+  if (document.documentElement.scrollTop < 10) {
+    btn.style.opacity = '1';
+    btn.style.pointerEvents = 'auto';
+  } else {
+    btn.style.opacity = '0';
+    btn.style.pointerEvents = 'none'; 
+  }
+});
+
+
+document.getElementById('scroll-Up').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
