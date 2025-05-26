@@ -37,7 +37,7 @@
   setInterval(nextImage, 3000);
 
 
-   
+  //  slider
   const slider = document.getElementById('slider');
   const dots = document.querySelectorAll('.dot');
   let currentSlide = 0;
@@ -61,6 +61,40 @@
       updateSlider();
     }
   }, 5000);
+
+  let startX = 0;
+let endX = 0;
+
+slider.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchmove', (e) => {
+  endX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchend', () => {
+  if (startX - endX > 50) {
+    // Swipe left
+    currentSlide = (currentSlide + 1) % 3;
+    updateSlider();
+  } else if (endX - startX > 50) {
+    // Swipe right
+    currentSlide = (currentSlide - 1 + 3) % 3;
+    updateSlider();
+  }
+});
+
+function goToSlide(index) {
+  currentSlide = index;
+  updateSlider();
+  autoSlide = false;
+
+  // Smooth scroll to slider (optional)
+  document.querySelector('.about-container').scrollIntoView({ behavior: 'smooth' });
+}
+
+
     
 
   // Scroll to Top Button

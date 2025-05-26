@@ -31,10 +31,10 @@
     <ul class="nav-links" id="nav-links">
       <li><a href="#services" class="about">Services <i class="fas fa-caret-down"></i>
             <ul class="dropdown-content">
-                    <li > Servicing <br> <small>Equipments servicing details</small></li>
-                    <li >Consultation <br> <small>Expert equipments advice</small></li>
-                     <li> Installation <br> <small>Professional installation</small></li>
-                      <li >Maintenace <br> <small>Regular maintenance services</small></li>
+                    <li onclick="goToSlide(1)"> Servicing <br> <small>Equipments servicing details</small></li>
+                    <li  onclick="goToSlide(0)">Consultation <br> <small>Expert equipments advice</small></li>
+                     <li  onclick="goToSlide(2)"> Installation <br> <small>Professional installation</small></li>
+                      <li  onclick="goToSlide(2)">Maintenace <br> <small>Regular maintenance services</small></li>
                    
 
                 </ul>
@@ -49,7 +49,6 @@
                     <li>Seamaty Dey Chem</li>
                     <li>Dr Accu</li>
                     <li>Seamaty Hand Held Electrolytes</li>
-                    <li>Double G Lipid Profile</li>
                     <li>Urinalysis Analyzer</li>
                     <li>Seamaty Hematolgy</li>
                     <li>List of Consumables</li>
@@ -113,10 +112,9 @@
 
   <section class="features reveal">
     <div class="feature" data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
-      <i class="fas fa-rocket fa-bounce " style="font-size:50px"  data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out"></i>
+      <i class="fas fa-rocket " style="font-size:50px"  data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out"></i>
       <h2> Our Mission</h2>
-         <p><span>Medsphere</span> Healthcare Ltd is on a mission to enhance the quality of healthcare in Africa. <br>
-            by providing unsurpassing medical devices and healthcare solutions. We strive to be the lifeline
+         <p><span>Medsphere</span> Healthcare Ltd is on a mission to enhance the quality of healthcare in Africa            by providing unsurpassing medical devices and healthcare solutions. We strive to be the lifeline
             that connects medical innovation to patients care.</p>
     </div>
     <div class="feature" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -237,7 +235,7 @@
     </div>
 
     
-     <div class="product-card" data-aos="zoom-in-up" data-aos-duration="200" data-aos-easing="ease-in-out">
+     <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/SMT-70.png" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
@@ -246,7 +244,7 @@
       <p class="product-name">SMT-70 | Semi-auto Chemistry Analyzer</p>
     </div>
 
-    <div class="product-card" data-aos="zoom-in-up" data-aos-duration="200" data-aos-easing="ease-in-out">
+    <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/SMT-120.png" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
@@ -255,7 +253,7 @@
       <p class="product-name">SMT-120 | Biochemistry Analyzer</p>
     </div>
 
-     <div class="product-card" data-aos="zoom-in-up" data-aos-duration="200" data-aos-easing="ease-in-out">
+     <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/CBS-50.webp" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
@@ -265,7 +263,7 @@
     </div>
 
     
-     <div class="product-card" data-aos="zoom-in-up" data-aos-duration="200" data-aos-easing="ease-in-out">
+     <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/Dr Accu.webp" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
@@ -286,13 +284,18 @@
   <div class="msg" data-aos="zoom-in-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
     <form action="post" data-aos="fade-right">
       <h3>We'd love to hear from you</h3><br>
-      <input type="text" id="E-mail/Tel" name="E-mail/Tel" required placeholder="Your Mail or Phone">
+      <input type="text" id="Tel" name="E-mail/Tel" required placeholder="Your Mail or Phone">
       <input type="text" id="message" name="message" required placeholder="Your message here">
       <button type="submit">Send</button>
     </form>
-
-    <img src="images/contact.jpg" alt="Contact image" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
-  </div>
+     
+    
+    <div class="contact-item" data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-in-out">
+      <i class="fab fa-whatsapp"></i>
+      <span>WhatsApp:</span>
+      <a href="https://wa.me/2347049413802" target="_blank">Chat on WhatsApp</a>
+    </div>
+   </div>
 
   <div class="contact-info-horizontal">
     <div class="contact-item" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
@@ -308,11 +311,8 @@
       <a href="tel:+2347049453339">+234 704 945 3339</a>
     </div>
 
-    <div class="contact-item" data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-in-out">
-      <i class="fab fa-whatsapp"></i>
-      <span>WhatsApp:</span>
-      <a href="https://wa.me/2347049413802" target="_blank">Chat on WhatsApp</a>
-    </div>
+     <img src="images/contact.webp" alt="Contact image" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
+  
   </div>
 </section>
 
