@@ -11,6 +11,7 @@
   --font-sm: 1rem;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -31,6 +32,11 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
+
+section {
+  scroll-margin-top: 80px; /* adjust to your nav height */
+}
+
 
 img {
   max-width: 100%;
@@ -409,31 +415,58 @@ font-style:italic;
   transform: scale(1.2) rotate(5deg);
 }
 
-
-/* SCROLL UP BUTTON */
-
-#scrollUpBtn {
+/* whatsapp contacts */
+.whatsapp-float {
   position: fixed;
-  bottom: 2.5rem;
-  right: 2.5rem;
-  z-index: 999;
-  font-size: 1.5rem;
-  background-color: #e60000; /* Red theme */
-  color: #fff;
-  border: none;
-  outline: none;
+  bottom: 120px;
+  right: 1rem;
+  background-color: #25D366;
+  color: white;
   padding: 1rem;
   border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 999;
   cursor: pointer;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.3);
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+}
+
+.chat-confirm {
   display: none;
+  position: absolute;
+  right: 70px;
+  background: #25D366;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
 }
 
-#scrollUpBtn:hover {
-  background-color: #cc0000;
-  transform: scale(1.1);
+/* SCROLL UP BUTTON */
+.scroll-up {
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  background-color: rgba(255, 0, 0, 0.623);
+  color: var(--secondary-color);
+  font-size:1.5rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 
 
 /* large Computers */
@@ -497,21 +530,27 @@ font-style:italic;
   .nav-links {
     display: none;
     flex-direction: column;
-    gap: 1rem;
+    gap: 4rem;
     background-color: var(--secondary-color);
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 2rem 1rem;
     box-shadow: var(--box-shadow);
     animation:dropdown 0.4s ease-in-out;
     z-index: 999;
   }
 
+  
+  .nav-links a{
+    font-size:1.8rem;
+  }
+
   header.navbar {
      padding:1rem .4rem;
   }
+
 
   .nav-links.active {
     display: flex;

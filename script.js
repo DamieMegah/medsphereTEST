@@ -4,12 +4,25 @@
  const toggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
     let hamburger = document.querySelector('.ham-menu');
+    
 
     toggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('active');
     });
 
+    let control = document.querySelectorAll('.navs');
+     control.forEach(nav => {
+      nav.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+
+     window.onscroll = function() {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+     }
     //HERO - slidDE
 
    
@@ -116,3 +129,57 @@ document.getElementById('scroll-Up').addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+ window.addEventListener('scroll', () => {{ behavior: 'smooth' }});
+// Smooth scroll to sections
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+
+  //centering all section when nav is click
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center' // or 'start' | 'end' depending on what you want
+      });
+    }
+  });
+});
+
+
+
+// WhatsApp Chat Confirmation
+
+  let chatReady = false;
+
+  function toggleChatConfirm() {
+    const confirmBox = document.getElementById('chatConfirm');
+
+    if (!chatReady) {
+      confirmBox.style.display = 'block';
+      chatReady = true;
+
+      // Reset after 5 seconds
+      setTimeout(() => {
+        confirmBox.style.display = 'none';
+        chatReady = false;
+      }, 5000);
+    } else {
+      window.open('https://wa.me/2347049413802', '_blank'); // Replace with your number
+    }
+  }
+

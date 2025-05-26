@@ -32,6 +32,11 @@ body {
   width: 100%;
 }
 
+section {
+  scroll-margin-top: 80px; /* adjust to your nav height */
+}
+
+
 img {
   max-width: 100%;
   height: auto;
@@ -332,10 +337,10 @@ header.navbar {
  .about-container {
       position: relative;
       overflow-x: hidden;
-      top:-1rem;
        width: 100vw;
        max-width: 100%;
-      background-color: var(--primary-color);
+       margin-top:5rem;
+      background-color: var(--secondary-color);
      
     }
 
@@ -345,6 +350,8 @@ header.navbar {
       display: flex;
       transition: transform 1s ease-in-out;
       height: 100%;
+     
+
      
     }
 
@@ -538,8 +545,8 @@ header.navbar {
   }
 }
 .contact-section {
-  background-color: var(--primary-color);
-  padding: 4rem 2rem;
+  background-color: var(--secondary-color);
+  padding: 4rem 1rem;
   color: var(--primary-color);
 }
 
@@ -547,12 +554,13 @@ header.navbar {
   font-size: var(--font-lg);
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--red);
+  color: var(--primary-color);
 }
 
 .msg {
   display: flex;
   flex-wrap: wrap;
+  width:100%;
   gap: 2rem;
   justify-content: center;
   align-items: center;
@@ -580,6 +588,16 @@ header.navbar {
   font-size: var(--font-sm);
   border: 1px solid #ccc;
   border-radius: 0.5rem;
+}
+
+.msg form #message{
+  height:10rem;
+  padding: 0rem 1rem;
+  
+}
+
+form #message::placeholder {
+  font-style: italic;
 }
 
 .msg form button {
@@ -779,12 +797,48 @@ font-style:italic;
   transform: scale(1.2) rotate(5deg);
 }
 
+/* whatsapp contacts */
+.whatsapp-float {
+  position: fixed;
+  bottom: 120px;
+  right: 1rem;
+  background-color: #25D366;
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+  cursor: pointer;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+}
+
+.chat-confirm {
+  display: none;
+  position: absolute;
+  right: 70px;
+  background: #25D366;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
 
 /* SCROLL UP BUTTON */
 .scroll-up {
   position: fixed;
   bottom: 4rem;
-  right: 2rem;
+  right: 1rem;
   background-color: rgba(255, 0, 0, 0.623);
   color: var(--secondary-color);
   font-size:1.5rem;
@@ -868,6 +922,11 @@ font-style:italic;
   .menu-toggle {
     display: block;
   }
+
+  section {
+  scroll-margin-top: 180px; /* adjust to your nav height */
+}
+
 
   .nav-links {
     display: none;
@@ -1121,6 +1180,13 @@ nav{
   }
 
   
+.contact-section {
+  background-color: var(--primary-color);
+  padding: 4rem 1rem;
+  color: var(--primary-color);
+}
+
+  
   .msg {
     flex-direction: column;
   }
@@ -1129,6 +1195,13 @@ nav{
     flex-direction: column;
     align-items: center;
   }
+
+  contact-section h2 {
+  font-size: var(--font-lg);
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+}
 
   .contact-item {
     width:100%;

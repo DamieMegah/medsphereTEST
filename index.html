@@ -31,34 +31,34 @@
     <ul class="nav-links" id="nav-links">
       <li><a href="#services" class="about">Services <i class="fas fa-caret-down"></i>
             <ul class="dropdown-content">
-                    <li onclick="goToSlide(1)"> Servicing <br> <small>Equipments servicing details</small></li>
-                    <li  onclick="goToSlide(0)">Consultation <br> <small>Expert equipments advice</small></li>
-                     <li  onclick="goToSlide(2)"> Installation <br> <small>Professional installation</small></li>
-                      <li  onclick="goToSlide(2)">Maintenace <br> <small>Regular maintenance services</small></li>
+                    <li class="navs" onclick="goToSlide(1)"> Servicing <br> <small>Equipments servicing details</small></li>
+                    <li class="navs"  onclick="goToSlide(0)">Consultation <br> <small>Expert equipments advice</small></li>
+                     <li class="navs"  onclick="goToSlide(2)"> Installation <br> <small>Professional installation</small></li>
+                      <li class="navs"  onclick="goToSlide(2)">Maintenace <br> <small>Regular maintenance services</small></li>
                    
 
                 </ul>
               </a>
             </li>
 
-      <li><a href="#" class="product">Products  <i class="fas fa-caret-down"></i>
+      <li ><a href="#" class="product">Products  <i class="fas fa-caret-down"></i>
                 <ul class="dropdown-content">
-                    <li>CBS 50</li>
-                    <li>Seamaty ABG</li>
-                    <li>Seamaty Semi-Auto</li>
-                    <li>Seamaty Dey Chem</li>
-                    <li>Dr Accu</li>
-                    <li>Seamaty Hand Held Electrolytes</li>
-                    <li>Urinalysis Analyzer</li>
-                    <li>Seamaty Hematolgy</li>
-                    <li>List of Consumables</li>
+                    <li class="navs">CBS 50</li>
+                    <li class="navs">Seamaty ABG</li>
+                    <li class="navs">Seamaty Semi-Auto</li>
+                    <li class="navs">Seamaty Dey Chem</li>
+                    <li class="navs">Dr Accu</li>
+                    <li class="navs">Seamaty Hand Held Electrolytes</li>
+                    <li class="navs">Urinalysis Analyzer</li>
+                    <li class="navs">Seamaty Hematolgy</li>
+                    <li class="navs">List of Consumables</li>
                      
                 </ul>
             </a>
             </li>
-                     <li><a href="#about">Company</a></li>
+                     <li class="navs"><a href="#about">Company</a></li>
 
-      <li><a href="#contact">Contact</a></li>
+      <li class="navs"><a href="#contact">Contact</a></li>
     </ul>
   </header>
 
@@ -283,14 +283,16 @@
 
   <div class="msg" data-aos="zoom-in-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
     <form action="post" data-aos="fade-right">
+
       <h3>We'd love to hear from you</h3><br>
+      <input type="text" id="message" name="message" required placeholder="Type your message here...">
       <input type="text" id="Tel" name="E-mail/Tel" required placeholder="Your Mail or Phone">
-      <input type="text" id="message" name="message" required placeholder="Your message here">
+     
       <button type="submit">Send</button>
     </form>
      
     
-    <div class="contact-item" data-aos="flip-right" data-aos-duration="2000" data-aos-easing="ease-in-out">
+    <div class="contact-item" data-aos="flip-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <i class="fab fa-whatsapp"></i>
       <span>WhatsApp:</span>
       <a href="https://wa.me/2347049413802" target="_blank">Chat on WhatsApp</a>
@@ -298,20 +300,20 @@
    </div>
 
   <div class="contact-info-horizontal">
-    <div class="contact-item" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
+    <div class="contact-item" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <i class="fas fa-envelope"></i>
       <span>Email:</span>
       <a href="mailto:customerservice.medsphere@outlook.com">customerservice.medsphere@outlook.com</a>
     </div>
 
-    <div class="contact-item" data-aos="flip-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
+    <div class="contact-item" data-aos="flip-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <i class="fas fa-phone"></i>
       <span>Phone:</span>
       <a href="tel:+2347049413802">+234 704 941 3802</a>
       <a href="tel:+2347049453339">+234 704 945 3339</a>
     </div>
 
-     <img src="images/contact.webp" alt="Contact image" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
+     <img src="images/logo2.jpg" alt="Contact image" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
   
   </div>
 </section>
@@ -360,6 +362,15 @@
     <p>Website designed by <small onclick="window.location.href='https://www.github.com/DamieMegah'" >DamieMegah</small></p>
   </div>
 </footer>
+
+
+
+<!-- WhatsApp Floating Button -->
+<div class="whatsapp-float" onclick="toggleChatConfirm()">
+  <i class="fab fa-whatsapp"></i>
+  <div class="chat-confirm" id="chatConfirm">Open chat?</div>
+</div>
+
 
 <!-- scroll up button -->
 
