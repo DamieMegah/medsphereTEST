@@ -839,16 +839,17 @@ font-style:italic;
   position: fixed;
   bottom: 4rem;
   right: 1rem;
-  background-color: rgba(255, 0, 0, 0.623);
+  background-color: rgba(243, 9, 9, 0.623);
   color: var(--secondary-color);
   font-size:1.5rem;
-  padding: 0.8rem 1.2rem;
+  padding: 1rem 1.3rem;
   border-radius: 50%;
   box-shadow: var(--box-shadow);
   cursor: pointer;
   z-index: 1000;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 
 /* large Computers */
 
@@ -994,12 +995,12 @@ font-style:italic;
   }
 
   .hero-content .btn {
-    background:#b8b8b4de;
+    background:var(--secondary-color);
     color:var(--black);
   }
 
   .hero-content .btn2{
-     background:#b8b8b4de;
+     background:var(--secondary-color);
     color:var(--black);
     margin:0 0rem;
     padding:0.8rem 1.3rem;
@@ -1182,13 +1183,20 @@ nav{
   
 .contact-section {
   background-color: var(--primary-color);
-  padding: 4rem 1rem;
+  padding: 0rem 1rem;
   color: var(--primary-color);
 }
 
   
   .msg {
     flex-direction: column;
+     
+  }
+
+  .msg form{
+     padding: 1rem;
+     flex: 1 1 200px;
+     width:100%;
   }
 
   .contact-info-horizontal {
@@ -1196,7 +1204,7 @@ nav{
     align-items: center;
   }
 
-  contact-section h2 {
+  .contact-section h2 {
   font-size: var(--font-lg);
   text-align: center;
   margin-bottom: 2rem;
@@ -1207,9 +1215,9 @@ nav{
     width:100%;
   }
   #message{
+   
     height:10rem;
   }
-
   
   .footer-container {
     grid-template-columns: 1fr;

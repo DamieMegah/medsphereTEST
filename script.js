@@ -113,12 +113,12 @@ function goToSlide(index) {
   // Scroll to Top Button
    window.addEventListener('scroll', () => {
   const btn = document.getElementById('scroll-Up');
-  if (document.documentElement.scrollTop < 10) {
-    btn.style.opacity = '1';
-    btn.style.pointerEvents = 'auto';
-  } else {
+  if (document.documentElement.scrollTop > 20) {
     btn.style.opacity = '0';
     btn.style.pointerEvents = 'none'; 
+  } else {
+    btn.style.opacity = '1';
+    btn.style.pointerEvents = 'auto';
   }
 });
 
@@ -145,20 +145,6 @@ document.getElementById('scroll-Up').addEventListener('click', () => {
   });
 
 
-  //centering all section when nav is click
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
-    const target = document.getElementById(targetId);
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center' // or 'start' | 'end' depending on what you want
-      });
-    }
-  });
-});
 
 
 
@@ -173,6 +159,13 @@ document.getElementById('scroll-Up').addEventListener('click', () => {
       confirmBox.style.display = 'block';
       chatReady = true;
 
+  // remove when on scroll
+      
+   window.addEventListener('scroll', () => {
+    confirmBox.style.display = 'none';
+        chatReady = false;
+   });
+ 
       // Reset after 5 seconds
       setTimeout(() => {
         confirmBox.style.display = 'none';

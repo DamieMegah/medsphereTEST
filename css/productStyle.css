@@ -215,15 +215,16 @@ section{
   justify-content: center;
   align-items:center;
   margin-top:-6rem;
-  color:var(--red);
+  color:var(--primary-color);
 }
 
 .features .f-text .fas{
- -webkit-text-stroke: 1px var(--red);
+ -webkit-text-stroke: 1px var(--primary-color);
   -webkit-text-fill-color:  transparent;
 }
 
 .key-feature{
+  margin-top:-5rem;
   text-align:center;
 }
 
@@ -418,7 +419,7 @@ font-style:italic;
 /* whatsapp contacts */
 .whatsapp-float {
   position: fixed;
-  bottom: 120px;
+  bottom: 128px;
   right: 1rem;
   background-color: #25D366;
   color: white;
@@ -455,11 +456,11 @@ font-style:italic;
 .scroll-up {
   position: fixed;
   bottom: 4rem;
-  right: 2rem;
-  background-color: rgba(255, 0, 0, 0.623);
+  right: 1rem;
+  background-color: rgba(243, 9, 9, 0.623);
   color: var(--secondary-color);
   font-size:1.5rem;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 50%;
   box-shadow: var(--box-shadow);
   cursor: pointer;
