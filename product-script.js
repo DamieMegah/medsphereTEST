@@ -22,10 +22,10 @@
         hamburger.classList.remove('active');
      }
 
-    //  contact
-    function contact(){
-      document.getElementById("contact")
-    }
+    //  CONTACT
+function contact() {
+  document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+}
 
 
 // FLOATING WHATSAPP BUTTON

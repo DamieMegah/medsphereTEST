@@ -23,6 +23,14 @@
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
      }
+
+
+     
+  //  PRODUCT
+function product() {
+  document.getElementById("product").scrollIntoView({ behavior: "smooth" });
+}
+
     //HERO - slidDE
 
    
@@ -113,7 +121,7 @@ function goToSlide(index) {
   // Scroll to Top Button
    window.addEventListener('scroll', () => {
   const btn = document.getElementById('scroll-Up');
-  if (document.documentElement.scrollTop > 20) {
+  if (document.documentElement.scrollTop > 10) {
     btn.style.opacity = '0';
     btn.style.pointerEvents = 'none'; 
   } else {
