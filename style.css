@@ -544,6 +544,28 @@ header.navbar {
     opacity: 1;
   }
 }
+#requestPopup input, #requestPopup textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  #requestPopup button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #d62828;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+
+
+/* CONTACT SECTION */
+
 .contact-section {
   background-color: var(--secondary-color);
   padding: 4rem 1rem;
@@ -583,7 +605,7 @@ header.navbar {
   font-size: var(--font-md);
 }
 
-.msg form input {
+.msg form input, textarea {
   padding: 1rem;
   font-size: var(--font-sm);
   border: 1px solid #ccc;
@@ -598,6 +620,7 @@ header.navbar {
 
 form #message::placeholder {
   font-style: italic;
+  padding:2rem 0;
 }
 
 .msg form button {

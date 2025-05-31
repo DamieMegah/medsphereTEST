@@ -331,10 +331,15 @@ section{
 }
 
 .footer-section li,
-.footer-section p {
+.footer-section p{
   font-size: var(--font-sm);
   margin: 0.5rem 0;
   line-height: 1.6;
+}
+
+.footer-section p a{
+   color:var(--secondary-color);
+   text-decoration: none;
 }
 
 .footer-bottom p small{
