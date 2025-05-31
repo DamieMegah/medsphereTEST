@@ -180,7 +180,19 @@ document.getElementById('scroll-Up').addEventListener('click', () => {
         chatReady = false;
       }, 5000);
     } else {
-      window.open('https://wa.me/2347049413802', '_blank'); // Replace with your number
+      window.open('https://wa.me/2347049413802? text=Hello i want more information on "DEVICE NAME" ', '_blank'); 
     }
   }
+
+  //contact form
+   document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(function(response) {
+        alert('Message sent successfully!');
+      }, function(error) {
+        alert('FAILED...', error);
+      });
+  });
 

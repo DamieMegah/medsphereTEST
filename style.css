@@ -1197,7 +1197,14 @@ nav{
      padding: 1rem;
      flex: 1 1 200px;
      width:100%;
+    
   }
+
+  .msg form h3{
+     align-self:center;
+  }
+
+
 
   .contact-info-horizontal {
     flex-direction: column;

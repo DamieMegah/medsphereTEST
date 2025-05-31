@@ -45,16 +45,14 @@
                 <ul class="dropdown-content">
                      <li class="navs" onclick="product()">All Product</li>
                     <li class="navs" onclick="window.location.href='CBS-50.html'">CBS 50</li>
-                    <li class="navs" onclick="window.location.href='ABG.html'">Seamaty ABG</li>
                      <li class="navs" onclick="window.location.href='SMT-30.html'">Seamaty SMT-30 <sub>Hematology Analyzer</sub></li>
                      <li class="navs" onclick="window.location.href='SMT-50.html'">Seamaty SMT-50  <sub>Hematology Analyzer</sub></li>
                     <li class="navs" onclick="window.location.href='SMT-70.html'">Seamaty SMT-70 <sub>Chemistry Analyzer</sub></li>
-                    <li class="navs" onclick="window.location.href='DEY-CHEM.html'">Seamaty Dey Chem</li>
-                    <li class="navs" onclick="window.location.href='DR-ACCU.html'">Dr Accu</li>
+                    <li class="navs" onclick="window.location.href='SMT-70.html'">Seamaty SMT-120 <sub>Chemistry Analyzer</sub></li>
+                    <li class="navs" onclick="window.location.href='DR-ACCU.html'">Dr Accu <sub>Fluorescence immunoassay Analyzer</sub></li>
                     <li class="navs "onclick="window.location.href='SE1.html'">Seamaty SE1 Hand Held Electrolyte</li>
                      <li class="navs "onclick="window.location.href='SG1.html'">Seamaty SG1 Hand Held Electrolyte</li>
                     <li class="navs" onclick="window.location.href='UA-201.html'">UA-201 Urine Analyzer</li>
-                    <li class="navs" onclick="window.location.href='hematology.html'">Seamaty Hematolgy</li>
                     <li class="navs">List of Consumables</li>
                      
                 </ul>
@@ -76,7 +74,7 @@
     <div class="hero2">
      <p>Discover our innovative medical and lab solutions tailored for excellence.</p>
       <div class="button">
-       <a href="#" class="btn">Explore</a> 
+       <a href="#product" class="btn">Explore</a> 
        <a href="#contact" class="btn2">Get&nbsp;in&nbsp;Touch</a>
       </div>
     </div>
@@ -255,16 +253,16 @@
       <img src="images/SMT-70.png" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
-        <button class="icon-btn">Learn More</button>
+        <button class="icon-btn" onclick="window.location.href='SMT-70.html'">Learn More</button>
       </div>
-      <p class="product-name">SMT-70 | Semi-auto Chemistry Analyzer</p>
+      <p class="product-name">SMT-70 | Semi-Auto Chemistry Analyzer</p>
     </div>
 
     <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/SMT-120.png" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
-        <button class="icon-btn">Learn More</button>
+        <button class="icon-btn" onclick="window.location.href='SMT-120.html'">Learn More</button>
       </div>
       <p class="product-name">SMT-120 | Biochemistry Analyzer</p>
     </div>
@@ -275,7 +273,7 @@
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
         <button class="icon-btn" onclick="window.location.href='CBS-50.html'">Learn More</button>
       </div>
-      <p class="product-name"> CBS-50 | Automatic electrolyte analyzer </p>
+      <p class="product-name"> CBS-50 | Automatic Electrolyte Analyzer </p>
     </div>
 
     
@@ -283,7 +281,7 @@
       <img src="images/Dr Accu.webp" alt="Medical Equipment" />
       <div class="overlay">
         <button class="icon-btn"><i class="fas fa-cart-plus"></i> Request</button>
-        <button class="icon-btn">Learn More</button>
+        <button class="icon-btn"onclick="window.location.href='DR-ACCU.html'">Learn More</button>
       </div>
       <p class="product-name"> Dr Accu | Immunoassay Analyzer </p>
     </div>
@@ -298,11 +296,12 @@
   <h2 data-aos="fade-down">Contact</h2>
 
   <div class="msg" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-    <form action="post" data-aos="fade-right">
+    <form action="post" data-aos="fade-right" id="contact-form">
 
       <h3>We'd love to hear from you</h3><br>
-      <input type="text" id="message" name="message" required placeholder="Type your message here...">
-      <input type="text" id="Tel" name="E-mail/Tel" required placeholder="Your Mail or Phone">
+
+      <input type="text" id="message" name="message" required placeholder="our message here...">
+      <input type="text" id="Tel" name="user_email" required placeholder="Your Mail or Phone">
      
       <button type="submit">Send</button>
     </form>
@@ -311,7 +310,7 @@
     <div class="contact-item" data-aos="flip-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <i class="fab fa-whatsapp"></i>
       <span>WhatsApp:</span>
-      <a href="https://wa.me/2347049413802" target="_blank">Chat on WhatsApp</a>
+      <a href="https://wa.me/2347049413802?text=Hello my name is       " target="_blank">Chat on WhatsApp</a>
     </div>
    </div>
 
@@ -374,7 +373,7 @@
 
   <!-- Bottom Footer -->
   <div class="footer-bottom">
-    <p>&copy; <span id="year">2025</span> Medsphere All rights reserved.</p>
+    <p>&copy; <span id="year">2025</span> Medsphere Healthcare Ltd  All rights reserved.</p>
     <p>Website designed by <small onclick="window.location.href='https://www.github.com/DamieMegah'" >DamieMegah</small></p>
   </div>
 </footer>
@@ -402,6 +401,14 @@
 <script>
   AOS.init();
 </script>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("Qx6Y3IoXsgQ01RVOY"); // public key
+   })();
+</script>
+
 
 </body>
 </html>

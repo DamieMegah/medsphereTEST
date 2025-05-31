@@ -51,7 +51,7 @@ let chatReady = false;
         chatReady = false;
       }, 5000);
     } else {
-      window.open('https://wa.me/2347049413802', '_blank'); // Replace with your number
+      window.open('https://wa.me/2347049413802? text=Hello i want more information on "DEVICE NAME" ', '_blank'); 
     }
   }
 
