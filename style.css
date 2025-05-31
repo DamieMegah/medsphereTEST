@@ -860,18 +860,21 @@ font-style:italic;
 /* SCROLL UP BUTTON */
 .scroll-up {
   position: fixed;
-  bottom: 4rem;
+  bottom: 2rem;
   right: 1rem;
   background-color: rgba(243, 9, 9, 0.623);
   color: var(--secondary-color);
   font-size:1.5rem;
-  padding: 1rem 1.3rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 50%;
   box-shadow: var(--box-shadow);
   cursor: pointer;
   z-index: 1000;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+
+
 
 
 /* large Computers */
@@ -982,7 +985,13 @@ font-style:italic;
 
 .product .dropdown-content{
   left:0;
+  font-size:1rem;
+  margin: 1rem 0;
 
+
+}
+.product .dropdown-content li{
+  padding: 1rem 0;
 }
 
   .hero {

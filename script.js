@@ -19,9 +19,10 @@
       });
     });
 
-     window.onscroll = function() {
+     window.onscroll = function(){
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
+        closeRequestPopup()
      }
 
 
@@ -118,15 +119,18 @@ function goToSlide(index) {
 
     
 
+ 
+  
+  
   // Scroll to Top Button
    window.addEventListener('scroll', () => {
   const btn = document.getElementById('scroll-Up');
   if (document.documentElement.scrollTop > 10) {
-    btn.style.opacity = '0';
-    btn.style.pointerEvents = 'none'; 
-  } else {
     btn.style.opacity = '1';
     btn.style.pointerEvents = 'auto';
+  } else {
+    btn.style.opacity = '0';
+    btn.style.pointerEvents = 'none'; 
   }
 });
 
@@ -137,6 +141,8 @@ document.getElementById('scroll-Up').addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+ 
+
 
  window.addEventListener('scroll', () => {{ behavior: 'smooth' }});
 // Smooth scroll to sections
@@ -215,9 +221,7 @@ document.getElementById('scroll-Up').addEventListener('click', () => {
 
   }
   
-  window.onscroll = function() {
-    closeRequestPopup()
-  }
+  
   window.dblclick = function() {
      closeRequestPopup()
   }
