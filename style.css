@@ -518,6 +518,41 @@ header.navbar {
   opacity: 1;
 }
 
+#requestPopup{
+    display:none;
+    position:fixed; 
+    top:50%; left:50%;
+    transform:translate(-50%, -50%); 
+    background:var(--background-color); 
+    padding:1.5rem;
+    border-radius:0.4rem; 
+    box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:999;
+}
+
+
+#requestPopup input, #requestPopup textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0.4rem;
+  }
+
+  #requestPopup button {
+    padding: 0.6rem 1rem;
+    border: none;
+    background-color:var(--red);
+    color: var(--background-color);
+    border-radius: 0.4rem;
+    margin-right: 0.6rem;
+    cursor: pointer;
+  }
+
+
+#requestPopup button:focus{
+  color: rgba(103, 12, 12, 0.7);
+}
+
 .icon-btn {
   background-color: var(--red);
   color: var(--secondary-color);
@@ -544,24 +579,6 @@ header.navbar {
     opacity: 1;
   }
 }
-#requestPopup input, #requestPopup textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-
-  #requestPopup button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #d62828;
-    color: white;
-    border-radius: 5px;
-    margin-right: 10px;
-    cursor: pointer;
-  }
-
 
 
 /* CONTACT SECTION */
@@ -1204,6 +1221,12 @@ nav{
   .product-card img {
     height: 180px;
   }
+
+  #requestPopup{
+    top:50%; left:40%;
+  }
+
+  
   .section-title {
     font-size: 2rem;
   }
