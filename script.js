@@ -193,7 +193,7 @@ document.getElementById('scroll-Up').addEventListener('click', () => {
       const deviceElement = document.getElementById('deviceName');
       const deviceName = deviceElement ? deviceElement.innerText.trim() : 'a device';
 
-      const message = `Hello, my name is ${userName || 'a customer'}, I want more information on "${deviceName}"`;
+      const message = `Hello, my name is ${userName || 'YOUR NAME'}, I want more information on "${deviceName}"`;
 
       const encodedMessage = encodeURIComponent(message);
       const whatsappURL = `https://wa.me/2347049413802?text=${encodedMessage}`;
