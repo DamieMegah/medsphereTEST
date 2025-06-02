@@ -900,6 +900,9 @@ font-style:italic;
  html{
     font-size:180%;
   }
+  .whatsapp-float {
+   bottom:220px;
+  }
 }
 
 @media (max-width:2560px){
@@ -907,6 +910,7 @@ font-style:italic;
   html{
     font-size:150%;
   }
+
 }
 
 @media (max-width:2550px){
