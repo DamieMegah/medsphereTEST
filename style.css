@@ -840,7 +840,7 @@ font-style:italic;
 /* whatsapp contacts */
 .whatsapp-float {
   position: fixed;
-  bottom: 120px;
+  bottom: 7.5rem;
   right: 1rem;
   background-color: #25D366;
   color: white;
@@ -900,9 +900,7 @@ font-style:italic;
  html{
     font-size:180%;
   }
-  .whatsapp-float {
-   bottom:220px;
-  }
+ 
 }
 
 @media (max-width:2560px){
@@ -954,7 +952,7 @@ font-style:italic;
 
 @media (max-width:860px) {
  html{
-  font-size:80%;
+  font-size:81%;
  }
 
  
