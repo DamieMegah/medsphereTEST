@@ -5,7 +5,7 @@
   --red: #D72638;
   --background-color: #FAFAFA;
   --box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.356);
-  --border-radius: 0rem;
+  --border-radius: 0.4rem;
   --font-lg: 2.8rem;
   --font-md: 1.5rem;
   --font-sm: 1rem;
@@ -420,6 +420,41 @@ header.navbar {
       opacity: 1;
       background-color: var(--red);
     }
+
+    .slider-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  padding: 0 1rem;
+}
+
+.arrow {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.arrow:hover {
+  background-color: var(--red);
+  color: #fff;
+  transform: scale(1.1);
+}
+
 
 
 /* FEATURES */

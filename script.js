@@ -22,7 +22,7 @@
      window.onscroll = function(){
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
-        
+       
      }
 
 
@@ -115,6 +115,19 @@ function goToSlide(index) {
   // Smooth scroll to slider (optional)
   document.querySelector('.about-container').scrollIntoView({ behavior: 'smooth' });
 }
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % 3;
+  updateSlider();
+  autoSlide = false;
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + 3) % 3;
+  updateSlider();
+  autoSlide = false;
+}
+
 
 
     
@@ -222,7 +235,3 @@ document.getElementById('scroll-Up').addEventListener('click', () => {
   }
   
   
-  window.dblclick = function() {
-     closeRequestPopup()
-  }
-   
