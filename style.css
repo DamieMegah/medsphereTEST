@@ -449,7 +449,7 @@ header.navbar {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.arrow:hover {
+.arrow:focus{
   background-color: var(--red);
   color: #fff;
   transform: scale(1.1);
