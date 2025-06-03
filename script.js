@@ -22,7 +22,7 @@
      window.onscroll = function(){
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
-        closeRequestPopup()
+        
      }
 
 
