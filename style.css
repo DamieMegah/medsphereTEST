@@ -62,6 +62,45 @@ header.navbar {
   height: auto;
 }
 
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: fit-content;
+  margin-left: auto;
+  padding: 0.5rem;
+}
+
+.search-container input {
+  width: 0;
+  opacity: 0;
+  transition: width 0.5s ease, opacity 0.5s ease;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: white;
+  margin-right: 0.5rem;
+}
+
+.search-container:hover input,
+.search-container input:focus {
+  width: 25rem;
+  opacity: 1;
+}
+
+.search-container i {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -121,7 +160,7 @@ header.navbar {
   color: var(--black);
   padding:.3rem 1.5rem;
   text-wrap:nowrap;
- 
+  list-style-type:none;
   border-bottom:1px solid #05050573;
 }
 
@@ -134,6 +173,42 @@ header.navbar {
  .product:hover .dropdown-content, .about:hover .dropdown-content{
   display:flex;
 }
+
+/* Position the second-level dropdown */
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  left: 40%; 
+  top: 2.5rem;
+  background-color: var(--background-color);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation:dropdown 0.3s ease-in-out;
+  z-index: 999;
+  min-width: 13.7rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Parent list item */
+.has-submenu {
+  position: relative;
+  padding: 1rem;
+}
+
+/* Show dropdown-content2 on hover */
+.has-submenu:hover .dropdown-content2 {
+  display: block;
+}
+
+/* Optional: Style inner links */
+.dropdown-content2 li.navs {
+  padding: 0.8rem 1.2rem;
+  white-space: nowrap;
+}
+
+.dropdown-content2 li.navs:hover {
+  background-color: var(--red);
+}
+
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -556,12 +631,12 @@ header.navbar {
 #requestPopup{
     display:none;
     position:fixed; 
-    top:50%; left:50%;
+    top:30%; left:50%;
     transform:translate(-50%, -50%); 
     background:var(--background-color); 
     padding:1.5rem;
     border-radius:0.4rem; 
-    box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:999;
+    box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:1999;
 }
 
 
@@ -620,14 +695,15 @@ header.navbar {
 
 .contact-section {
   background-color: var(--secondary-color);
-  padding: 4rem 1rem;
+  padding: 1.5rem 1rem;
   color: var(--primary-color);
+  margin:1rem 0;
 }
 
 .contact-section h2 {
   font-size: var(--font-lg);
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: var(--primary-color);
 }
 
@@ -642,14 +718,14 @@ header.navbar {
 }
 
 .msg form {
-  flex: 1 1 300px;
+  flex: 1 1 6rem;
   background-color: var(--secondary-color);
   padding: 2rem;
   box-shadow: var(--box-shadow);
   border-radius:0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .msg form h3 {
@@ -658,21 +734,20 @@ header.navbar {
 }
 
 .msg form input, textarea {
-  padding: 1rem;
   font-size: var(--font-sm);
   border: 1px solid #ccc;
   border-radius: 0.5rem;
+  padding:1rem;
 }
 
-.msg form #message{
-  height:10rem;
-  padding: 0rem 1rem;
-  
-}
+ textarea{
+  height:5rem;
+  padding: 2rem 1rem;
+ }
 
 form #message::placeholder {
   font-style: italic;
-  padding:2rem 0;
+ 
 }
 
 .msg form button {
@@ -690,14 +765,6 @@ form #message::placeholder {
   background-color: #b71d2b;
 }
 
-.msg img {
-  flex: 1 1 300px;
-  max-width: 400px;
-  width: 100%;
-  border-radius: 1rem;
-  box-shadow: var(--box-shadow);
-}
-
 .contact-info-horizontal {
   display: flex;
   flex-wrap: wrap;
@@ -707,18 +774,18 @@ form #message::placeholder {
 }
 
 .contact-item {
-  flex: 1 1 200px;
+  flex: 1 1 6rem;
   background-color: var(--secondary-color);
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 1rem;
   box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.3rem;
 }
 
 .contact-item i {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--red);
 }
 
@@ -808,6 +875,17 @@ font-style:italic;
   transform: scale(1.2);
 }
 
+#soc{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+#soc .logo{
+  background:var(--background-color);
+  margin-top:0.5rem;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
@@ -816,6 +894,8 @@ font-style:italic;
   font-size: 0.9rem;
   color: var(--secondary-color);
 }
+
+
 
 
 .social-icons a i {
@@ -1028,9 +1108,17 @@ font-style:italic;
     font-size:1.8rem;
   }
 
+
   header.navbar {
      padding:1rem .4rem;
   }
+
+  
+.search-container:hover input,
+.search-container input:focus {
+  width: 15rem;
+  opacity: 1;
+}
 
   .nav-links.active {
     display: flex;
@@ -1046,6 +1134,11 @@ font-style:italic;
 }
 .product .dropdown-content li{
   padding: 1rem 0;
+}
+
+.dropdown-content2{
+   left: 50%; 
+    top: 2.9rem;
 }
 
   .hero {

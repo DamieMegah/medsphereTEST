@@ -73,6 +73,12 @@
     <div class="logo">
       <img src="images/logo.png"   loading="lazy"  alt="medsphere Logo" />
     </div>
+
+    <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search Equipments..."  oninput="filterProducts()">
+  <i class="fas fa-search"></i>
+</div>
+
     <div class="menu-toggle" id="menu-toggle"> 
         <nav>
          <div class="ham-menu">
@@ -95,17 +101,50 @@
               </a>
             </li>
 
-      <li ><a href="#" class="product">Products  <i class="fas fa-caret-down"></i>
+      <li >
+        <a href="#" class="product">Products  <i class="fas fa-caret-down"></i>
                 <ul class="dropdown-content">
-                     <li class="navs" onclick="product()">All Product</li>
-                     <li class="navs "onclick="window.location.href='SE1.html'">Seamaty SE1 Hand Held Electrolyte</li>
-                     <li class="navs "onclick="window.location.href='SG1.html'">Seamaty SG1 Blood Gas Analyzer</li>
-                     <li class="navs" onclick="window.location.href='CBS-50.html'">CBS 50 | Automatic Electrolyte Analyzer </li>
-                     <li class="navs" onclick="window.location.href='SMT-30.html'">Seamaty SMT-30 <sub>Hematology Analyzer</sub></li>
-                     <li class="navs" onclick="window.location.href='SMT-50.html'">Seamaty SMT-50  <sub>Hematology Analyzer</sub></li>
-                     <li class="navs" onclick="window.location.href='SMT-70.html'">Seamaty SMT-70 <sub>Chemistry Analyzer</sub></li>
-                     <li class="navs" onclick="window.location.href='SMT-120.html'">Seamaty SMT-120 <sub>Chemistry Analyzer</sub></li>
-                     <li class="navs" onclick="window.location.href='DR-ACCU.html'">Dr Accu <sub>Fluorescence immunoassay Analyzer</sub></li>
+             <li class="navs" onclick="product()">All Product</li>
+ 
+<li class="has-submenu">
+    Hematology Analyzer
+    <ul class="dropdown-content2">
+      <li class="navs" onclick="window.location.href='SMT-30.html'">Seamaty SMT-30 | 3-Part</li>
+      <li class="navs" onclick="window.location.href='SMT-50.html'">Seamaty SMT-50 | 5-Part</li>
+    </ul>
+  </li>
+
+  <li class="has-submenu">
+    Chemistry Analyzer
+    <ul class="dropdown-content2">
+      <li class="navs" onclick="window.location.href='SMT-70.html'">Seamaty SMT-70 </li>
+      <li class="navs" onclick="window.location.href='SMT-120.html'">Seamaty SMT-120 </li>
+    </ul>
+  </li>
+
+  <li class="has-submenu">
+    Electrolyte Analyzer
+    <ul class="dropdown-content2">
+      <li class="navs" onclick="window.location.href='SE1.html'">Seamaty SE1 – Hand Held </li>
+      <li class="navs" onclick="window.location.href='CBS-50.html'">CBS 50 – Automatic </li>
+    </ul>
+  </li>
+
+   <li class="has-submenu">
+      Blood Gas Analyzer
+     <ul class="dropdown-content2">
+                    <li class="navs" onclick="window.location.href='SG1.html'">Seamaty SG1 - Hand Held</li>
+    </ul>
+  </li>
+  
+   <li class="has-submenu">
+      Fluorescence immunoassay Analyzer
+     <ul class="dropdown-content2">
+                   <li class="navs" onclick="window.location.href='DR-ACCU.html'">Dr Accu</li>
+    </ul>
+  </li>
+         
+                    
                      <li class="navs" onclick="window.location.href='UA-201.html'">UA-201 Urine Analyzer</li>
                      <li class="navs">List of Consumables</li>
                      
@@ -254,7 +293,7 @@
 </div>
 
 
-<section class="products-section" id="product">
+<section  class="products-section" id="product">
   <h2 class="section-title">Our Top Equipments</h2>
   <div class="products-grid">
     <!-- Product Card -->
@@ -264,7 +303,7 @@
      <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/UA201.png"   loading="lazy"  alt="UA-201 |Semi-Automated t" />
       <div class="overlay">
-        <button class="icon-btn" onclick="openRequestPopup('UA-201 |Semi-Automated Urine Analyzer')"> <i class="fas fa-cart-plus"></i> Request</button>
+        <button class="icon-btn" onclick="openRequestPopup('UA-201 |Semi-Automated Urine Analyzer')"> <i class="fas fa-cart-plus"></i> Request Quote</button>
         <button class="icon-btn"onclick="window.location.href='UA-201.html'">Learn More</button>
       </div>
       <p class="product-name"> UA-201 |Semi-Automated Urine Analyzer </p>
@@ -274,7 +313,7 @@
      <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/SG-1.png"   loading="lazy"  alt="SG-1 | Blood Gas & Electrolyte Analyzer" />
       <div class="overlay">
-        <button class="icon-btn" onclick="openRequestPopup('SG-1 | Blood Gas & Electrolyte Analyzer')"> <i class="fas fa-cart-plus"></i> Request</button>
+        <button class="icon-btn" onclick="openRequestPopup('SG-1 | Blood Gas & Electrolyte Analyzer')"> <i class="fas fa-cart-plus"></i> Request Quote</button>
         <button class="icon-btn"onclick="window.location.href='SG1.html'">Learn More</button>
       </div>
       <p class="product-name"> SG-1 | Blood Gas & Electrolyte Analyzer </p>
@@ -284,7 +323,7 @@
     <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/SE1.jpg"   loading="lazy"  alt="SE1 | Electrolyte Analyzer" />
       <div class="overlay">
-        <button class="icon-btn" onclick="openRequestPopup('SE1 | Electrolyte Analyzer | POC Portable ISE Analyzer')"> <i class="fas fa-cart-plus"></i> Request</button>
+        <button class="icon-btn" onclick="openRequestPopup('SE1 | Electrolyte Analyzer | POC Portable ISE Analyzer')"> <i class="fas fa-cart-plus"></i> Request Quote</button>
         <button class="icon-btn" onclick="window.location.href='SE1.html'">Learn More</button>
       </div>
       <p class="product-name">SE1 | Electrolyte Analyzer | POC Portable ISE Analyzer
@@ -294,7 +333,7 @@
      <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/SMT-30.jpg"   loading="lazy"  alt="SMT-30 | 3-Part Auto" />
       <div class="overlay">
-        <button class="icon-btn" onclick="openRequestPopup('SMT-30 | 3-Part Auto Hematology Analyzer')"> <i class="fas fa-cart-plus"></i> Request</button>
+        <button class="icon-btn" onclick="openRequestPopup('SMT-30 | 3-Part Auto Hematology Analyzer')"> <i class="fas fa-cart-plus"></i> Request Quote</button>
         <button class="icon-btn"  onclick="window.location.href='SMT-30.html'">Learn More</button>
       </div>
       <p class="product-name">SMT-30 | 3-Part Auto Hematology Analyzer</p>
@@ -303,7 +342,7 @@
      <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/SMT-50.png"   loading="lazy"  alt="SMT-50 | 5-Part" />
       <div class="overlay">
-        <button class="icon-btn" onclick="openRequestPopup('SMT-50 | 5-Part Auto Hematology Analyzer')"> <i class="fas fa-cart-plus"></i> Request</button>
+        <button class="icon-btn" onclick="openRequestPopup('SMT-50 | 5-Part Auto Hematology Analyzer')"> <i class="fas fa-cart-plus"></i> Request Quote</button>
         <button class="icon-btn" onclick="window.location.href='SMT-50.html'">Learn More</button>
       </div>
       <p class="product-name">SMT-50 | 5-Part Auto Hematology Analyzer</p>
@@ -313,7 +352,7 @@
      <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/SMT-70.png"   loading="lazy"  alt="Medical Equipment" />
       <div class="overlay">
-        <button class="icon-btn" onclick="openRequestPopup('SMT-70 | Semi-Auto Chemistry Analyzer')"> <i class="fas fa-cart-plus"></i> Request</button>
+        <button class="icon-btn" onclick="openRequestPopup('SMT-70 | Semi-Auto Chemistry Analyzer')"> <i class="fas fa-cart-plus"></i> Request Quote</button>
         <button class="icon-btn" onclick="window.location.href='SMT-70.html'">Learn More</button>
       </div>
       <p class="product-name">SMT-70 | Semi-Auto Chemistry Analyzer</p>
@@ -322,7 +361,7 @@
     <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/SMT-120.png"   loading="lazy"  alt="Medical Equipment" />
       <div class="overlay">
-        <button class="icon-btn" onclick="openRequestPopup('SMT-120 | Biochemistry Analyzer')"> <i class="fas fa-cart-plus"></i> Request</button>
+        <button class="icon-btn" onclick="openRequestPopup('SMT-120 | Biochemistry Analyzer')"> <i class="fas fa-cart-plus"></i> Request Quote</button>
         <button class="icon-btn" onclick="window.location.href='SMT-120.html'">Learn More</button>
       </div>
       <p class="product-name">SMT-120 | Biochemistry Analyzer</p>
@@ -331,7 +370,7 @@
      <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/CBS-50.webp"   loading="lazy"  alt="Medical Equipment" />
       <div class="overlay">
-        <button class="icon-btn" onclick="openRequestPopup('CBS-50 | Automatic Electrolyte Analyzer')"> <i class="fas fa-cart-plus"></i> Request</button>
+        <button class="icon-btn" onclick="openRequestPopup('CBS-50 | Automatic Electrolyte Analyzer')"> <i class="fas fa-cart-plus"></i> Request Quote</button>
         <button class="icon-btn" onclick="window.location.href='CBS-50.html'">Learn More</button>
       </div>
       <p class="product-name"> CBS-50 | Automatic Electrolyte Analyzer </p>
@@ -341,7 +380,7 @@
      <div class="product-card" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <img src="images/Dr Accu.webp"   loading="lazy"  alt="Medical Equipment" />
       <div class="overlay">
-        <button class="icon-btn" onclick="openRequestPopup(' DR-ACCU|Immunoassay analyzer')"> <i class="fas fa-cart-plus"></i> Request</button>
+        <button class="icon-btn" onclick="openRequestPopup(' DR-ACCU|Immunoassay analyzer')"> <i class="fas fa-cart-plus"></i> Request Quote</button>
         <button class="icon-btn"onclick="window.location.href='DR-ACCU.html'">Learn More</button>
       </div>
       <p class="product-name"> Dr Accu | Immunoassay Analyzer </p>
@@ -354,7 +393,7 @@
 
 <!-- Popup Form --><!-- Popup Form -->
 <div id="requestPopup">
-<form action="https://formspree.io/f/xovwqoze" method="POST">
+  <form action="https://formspree.io/f/xovwqoze" method="POST">
    
 
     <!-- Hidden input for actual submission -->
@@ -376,7 +415,7 @@
   <h2 data-aos="fade-down">Contact</h2>
 
   <div class="msg" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-  <form data-aos="fade-right" id="contact-form"  action="https://formspree.io/f/xrbkzrzz" method="POST">
+  <form data-aos="fade-right" id="contact-form"  action="https://formspree.io/f/xovwqoze" method="POST">
   <h3>We'd love to hear from you</h3><br>
 
   <!-- User's message -->
@@ -391,23 +430,21 @@
 
 
     
-    <div class="contact-item" data-aos="flip-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
-      <i class="fab fa-whatsapp"></i>
-      <span>WhatsApp:</span>
-     <a href="https://wa.me/2347049413802?text=Hello%20my%20name%20is" target="_blank">
-  Chat on WhatsApp
-</a>
+    <div class="contact-item" >
 
-    </div>
-   </div>
+      <div class="contact-item" data-aos="flip-up" data-aos-duration="1000" data-aos-easing="ease-in-out"> 
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp:</span>
+        <a href="https://wa.me/2347049413802?text=Hello%20my%20name%20is" target="_blank">Chat on WhatsApp</a>
+      </div>
 
-  <div class="contact-info-horizontal">
     <div class="contact-item" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <i class="fas fa-envelope"></i>
       <span>Email:</span>
       <a href="mailto:customerservice.medsphere@outlook.com">customerservice.medsphere@outlook.com</a>
     </div>
 
+    
     <div class="contact-item" data-aos="flip-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
       <i class="fas fa-phone"></i>
       <span>Phone:</span>
@@ -415,11 +452,18 @@
       <a href="tel:+2347049453339">+234 704 945 3339</a>
     </div>
 
-     <img src="images/logo2.jpg"   loading="lazy"  alt="Contact image" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
-  
+    </div>
+   </div>
+
+
+   
   </div>
 </section>
 
+
+  
+   
+  
 
 
 
@@ -447,7 +491,7 @@
     </div>
 
     <!-- Social Media -->
-    <div class="footer-section">
+    <div class="footer-section" id="soc">
       <h3>Follow Us</h3>
       <div class="social-icons">
         <a href="https://www.facebook.com/share/16N58SpbUS/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -455,6 +499,9 @@
         <a href="https://www.LinkedIn.com/company/medsphere-healthcare/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.instagram.com/medsphere_healthcare_limited/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
+        <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="medsphere Logo" />
+       </a>
     </div>
   </div>
 

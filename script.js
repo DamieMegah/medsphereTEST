@@ -24,6 +24,28 @@
         hamburger.classList.remove('active');
        
      }
+function filterProducts() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const products = document.querySelectorAll(".product-card");
+  let anyMatch = false;
+
+  products.forEach(product => {
+    const name = product.querySelector(".product-name").textContent.toLowerCase();
+    if (name.includes(input)) {
+      product.style.display = "block"; //can be "flex" or "block"
+      anyMatch = true;
+    } else {
+      product.style.display = "none";
+    }
+  });
+
+  // If user has typed at least 1 character, scroll to the products
+  if (input.length > 0 && anyMatch) {
+    document.getElementById("product").scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+
 
 
      

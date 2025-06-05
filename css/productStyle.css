@@ -373,6 +373,18 @@ font-style:italic;
   transition: all 0.3s ease-in-out;
 }
 
+#soc{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+#soc .logo{
+  background:var(--background-color);
+  margin-top:0.5rem;
+}
+
+
 /* Facebook */
 .fa-facebook {
   color: #1877F2;
@@ -460,7 +472,7 @@ font-style:italic;
 /* SCROLL UP BUTTON */
 .scroll-up {
   position: fixed;
-  bottom: 4rem;
+  bottom: 3rem;
   right: 1rem;
   background-color: rgba(243, 9, 9, 0.623);
   color: var(--secondary-color);
