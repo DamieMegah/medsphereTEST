@@ -1,14 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 :root {
   --primary-color: #0c0d0e;
   --secondary-color: #ffffff;
   --black: #000000f3;
   --red: #D72638;
-  --background-color: #FAFAFA;
-  --box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.356);
-  --border-radius: 0rem;
-  --font-lg: 2.8rem;
-  --font-md: 1.5rem;
-  --font-sm: 1rem;
+  --background-color: #f6fafb;
+  --box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.519);
+  --border-radius: 0.4rem;
+  --font-lg: 2.6rem;
+  --font-md: 1.3rem;
+  --font-sm: 0.8rem;
 }
 
 
@@ -23,7 +26,7 @@ html{
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   background-color: var(--background-color);
   color: var(--black);
@@ -54,14 +57,14 @@ header.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   box-shadow: var(--box-shadow);
   z-index: 1000;
   
 }
 
 .logo img {
-  width: 6rem;
+  width: 5rem;
   height: auto;
 }
 
@@ -75,7 +78,7 @@ header.navbar {
   text-decoration: none;
   color: var(--black);
   font-size: var(--font-sm);
-  BORDER-RADIUS:0.4rem;
+  border-radius: var(--border-radius);
   padding: .5rem 1rem;
 }
 
@@ -142,8 +145,8 @@ header.navbar {
 }
 
 section{
-  padding: 2rem 3rem;
-  margin-top:5rem;
+  padding: 2rem 1.2rem;
+  margin-top:3rem;
 }
 
 .address a{
@@ -154,31 +157,35 @@ section{
   display:flex;
   flex-direction:row;
   gap:2rem;
+  padding:3rem 1.3rem;
+  margin-bottom:5rem;
 }
 
 .info img{
   width:50%;
   height:auto;
-  border-radius:0.5rem;
+  border-radius:var(--border-radius);
 }
 .info p{
    font-size:1.2rem;
 }
 
 .info button{
-  color:var(--red);
-  border:.1px solid var(--red);
+  color:var(--primary-color);
+  border:2px solid var(--primary-color);
   background:var(--background-color);
   padding:.5rem 1.5rem;
   font-size:1rem;
   margin-top:1.4rem ;
-  border-radius:0.2rem;
+  border-radius:var(--border-radius);
   cursor:pointer;
+  font-weight:600;
 }
 
 .info button:hover{
  color:var(--background-color);
   background:var(--red);
+  border:.1px solid var(--background-color);
 }
 
 
@@ -194,19 +201,21 @@ section{
   align-items:center;
   gap: 0rem;
   height: 100vh;
-  padding:0 1.5rem;
+  padding:4rem 1.4rem;
 }
 
 .features .img{
   display:flex;
    gap: 15rem;
    margin-top:-7rem;
+  
  
 }
 
 .features img{
   width:24rem;
   border-radius:0.2rem;
+  border-radius: var(--border-radius);
 }
 
 .features .f-text{
@@ -223,6 +232,8 @@ section{
   -webkit-text-fill-color:  transparent;
 }
 
+
+
 .key-feature{
   margin-top:-5rem;
   text-align:center;
@@ -230,7 +241,7 @@ section{
 
 .key-feature h1, .f1 h1{
   font-size:var(--font-lg);
-  color:var(--red);
+  color:var(--primary-color);
   margin-bottom:1rem;
 }
 
@@ -298,16 +309,29 @@ section{
 }
 
 .contact-info i {
-  color: var(--primary-color);
+ 
   margin-right: 10px;
   font-size: 1.3rem;
 }
 
 
+.contact-info .fa-whatsapp {
+  color: #25D366;
+}
+
+.contact-info .fa-envelope {
+  color: goldenrod;
+}
+
+
+.contact-info .fa-phone {
+  color: rgb(24, 174, 238);
+}
+
 .site-footer {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding: 3rem 2rem 1rem;
+  padding: 3rem 1rem ;
   margin-top: 4rem;
 }
 
@@ -315,7 +339,7 @@ section{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1240px;
   margin: auto;
 }
 
@@ -566,7 +590,7 @@ font-style:italic;
   }
 
   header.navbar {
-     padding:1rem .4rem;
+     padding:1rem 2rem;
   }
 
 
@@ -587,14 +611,14 @@ nav{
 }
 
 .ham-menu{
-    height: 38px;
-    width: 35px;
+    height: 31px;
+    width: 34px;
     margin-left: auto;
     position: relative;
 }
 
 .ham-menu span{
-    height: 4px;
+    height: 2.5px;
     width: 100%;
     background-color: var(--black);
     border-radius: 1px;
@@ -637,9 +661,10 @@ section{
 
 
 .info{
-  display:flex;
   flex-direction:column;
   gap:1rem;
+  padding:3rem 0.01rem;
+  margin:2rem;
 }
 
 .info img{
@@ -647,17 +672,18 @@ section{
   height:auto;
 }
 
-.features{
-  padding: 0 0;
-}
-
 .f1 h1{
   margin-bottom:-1.5rem;
+}
+
+.features{
+  padding: 0 0;
 }
 
 
 .features .img{
    flex-direction:column;
+   align-items: center;
    gap:4rem;
 }
 
@@ -666,6 +692,14 @@ font-size:1.9rem;
 }
 .key-feature  .key-text span{
    font-size:1rem;
+}
+
+.contact{
+  margin: 0 1.5rem;
+}
+
+.site-footer {
+  padding: 3rem 3rem;
 }
 
 }
