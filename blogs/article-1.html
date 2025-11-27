@@ -10,13 +10,13 @@
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Ultimate Medical Equipment Buyer’s Checklist for Nigerian Clinics">
     <meta property="og:description" content="2026 checklist for Nigerian doctors & hospital admins: streamline needs assessment, vet suppliers, and ensure smooth installation.">
-    <meta property="og:image" content="https://damiemegah.github.io/medsphereTEST/images/checklist.jpg">
+    <meta property="og:image" content="https://www.medspherehealthcare.com/images/checklist.jpg">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://damiemegah.github.io/medsphereTEST/blogs/article-1.html">
+    <meta property="og:url" content="https://www.medspherehealthcare.com/blogs/article-1.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ultimate Medical Equipment Buyer’s Checklist for Nigerian Clinics">
     <meta name="twitter:description" content="2026 checklist for Nigerian doctors & hospital admins: streamline needs assessment, vet suppliers, and ensure smooth installation.">
-    <meta name="twitter:image" content="https://damiemegah.github.io/medsphereTEST/images/checklist.jpg">
+    <meta name="twitter:image" content="https://www.medspherehealthcare.com/images/checklist.jpg">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -139,6 +139,12 @@
                      guarantees access to reliable, scalable, and durable
                      equipment solutions.</p>
                      <button onclick="location.href='mailto:customerservice.medsphere@outlook.com'">Contact Us</button>
+
+                      <!-- Share Functionality -->
+                      <button id="shareButton">
+                          Share Post &#x1F517;
+                      </button>
+                      <div id="messageBox"></div>
                  </div>
                </div>
             </div>
@@ -179,6 +185,17 @@
                                 or Port Harcourt to ensure warranty and service support. Always verify they supply genuine brands; medsphere healthcare ltd is a trusted option.</p>
 
                             </p>
+                        </div>
+                    </details>
+                </div>
+
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <details>
+                        <summary itemprop="name">How much does a medical laboratory setup cost?</summary>
+                        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <p itemprop="text">The cost of setting up a medical laboratory can vary widely based on factors 
+                                such as location, size, and the specific equipment needed. On average, a small laboratory 
+                                setup may range from  $10,000 (&#x20A6;15,000,000) to $100,000 (&#x20A6;150,000,000) or more. It's essential to conduct a thorough needs assessment and budget accordingly. Medsphere Healthcare Ltd can provide guidance on cost-effective solutions and equipment procurement.</p>
                         </div>
                     </details>
                 </div>
@@ -257,7 +274,10 @@
         <div class="top"> <a href="#top">&uarr; Back to Top</a></div>
     </article>
 
-  <script>
+     <script>
+
+    
+    document.addEventListener('DOMContentLoaded', () => {
 
    // --- Elements ---
 const form = document.querySelector("#newsletterForm"); // Target the form, not the button
@@ -306,6 +326,73 @@ form.addEventListener("submit", async function(event) {
       document.querySelector("#newsletter-logo").addEventListener("click", function() {
 
         window.location.href = "/index.html";
+    });
+
+        //share fnction
+        const shareButton = document.getElementById('shareButton');
+        const messageBox = document.getElementById('messageBox');
+        
+        // Function to display a temporary message
+        function displayMessage(message) {
+            messageBox.textContent = message;
+            setTimeout(() => {
+                messageBox.textContent = '';
+            }, 3000);
+        }
+
+        // Fallback function for copying text to clipboard
+        function copyLinkToClipboard(textToCopy) {
+            try {
+                // Create a temporary input element
+                const tempInput = document.createElement('textarea');
+                tempInput.value = textToCopy;
+                document.body.appendChild(tempInput);
+                
+                // Select and copy the text
+                tempInput.select();
+                // document.execCommand('copy') is used as navigator.clipboard.writeText may not work in iframes
+                document.execCommand('copy');
+                
+                // Clean up the temporary element
+                document.body.removeChild(tempInput);
+                
+                displayMessage('Link copied to clipboard!');
+            } catch (err) {
+                console.error('Could not copy text: ', err);
+                displayMessage('Failed to copy link. Please copy manually: ' + textToCopy);
+            }
+        }
+
+        // The core logic now attempts to use the native Web Share API
+        shareButton.addEventListener('click', async () => {
+            const currentUrl = window.location.href;
+            
+            // Data to share via the native dialog
+            const shareData = {
+                title: 'Medical Equipment Budgeting Guide',
+                text: 'Read this guide on budgeting for essential medical equipment and operational costs.',
+                url: currentUrl,
+            };
+
+
+            if (navigator.share) {
+                // Use the native share dialog if available
+                try {
+                    await navigator.share(shareData);
+                    // The native UI handles success/cancellation feedback
+                } catch (err) {
+                    if (err.name !== 'AbortError') {
+                        // Handle actual sharing errors (not user cancellation)
+                        console.error('Error sharing:', err);
+                        displayMessage('Sharing failed. Copying link instead.');
+                        copyLinkToClipboard(currentUrl);
+                    }
+                }
+            } else {
+                // Fallback: Copy the link to the clipboard if native sharing is unavailable
+                copyLinkToClipboard(currentUrl);
+            }
+        });
     });
 
    
