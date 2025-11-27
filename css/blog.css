@@ -136,6 +136,27 @@ button{
 
 button:hover{
     background-color: #b71c27;
+    transform: translateY(-2px);
+}
+
+button#shareButton{
+   background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.6rem 1.4rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease;
+    margin: 0.4rem 0;
+}
+
+button#shareButton:hover{
+    background-color: rgba(8, 235, 8, 0.515);
+    color:  rgb(135, 135, 130);
+    transform: translateY(-2px);
+    border: 1px outset rgb(135, 135, 130);
 }
 
 .conclusion h2{
@@ -245,21 +266,21 @@ details p { margin-top: 0.5rem; color: #444; font-size: 0.95rem; }
 }
 .related-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+    gap: 0.6rem;
 }
 .related-links a {
-  background: white;
+  background:  #e1e2e4;
   padding: 1rem;
   border-radius: var(--border-radius);
   text-decoration: none;
   color: var(--black);
-  box-shadow: var(--box-shadow);
+  
   font-weight: bold;
   font-size: 0.9rem;
-  transition: 0.3s;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
-.related-links a:hover { transform: translateY(-3px); box-shadow: var(--hover-shadow); }
+.related-links a:hover { transform: translateY(-3px); background-color:#987a7a54; }
 
 .top a{
     color: var(--primary-color);
